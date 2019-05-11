@@ -25,7 +25,7 @@ func main() {
 		fmt.Println(columnMap.Error)
 		return
 	}
-	columnResults := columnMap.Results
+	columnResults := columnMap.Result
 	fmt.Printf("%+v",columnResults)
 
 	dataMap := dbIns.SQL("SELECT * FROM student").Query()
@@ -34,5 +34,5 @@ func main() {
 		return
 	}
 	fmt.Println()
-	fmt.Printf("%+v",dataMap.Results)
+	fmt.Printf("%+v",dataMap.Result)
 }
