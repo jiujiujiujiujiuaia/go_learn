@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/xormplus/core"
 	"github.com/xormplus/xorm"
-	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
@@ -26,13 +27,13 @@ func main() {
 		return
 	}
 	columnResults := columnMap.Result
-	fmt.Printf("%+v",columnResults)
+	fmt.Printf("%+v", columnResults)
 
 	dataMap := dbIns.SQL("SELECT * FROM student").Query()
-	if dataMap.Error != nil{
+	if dataMap.Error != nil {
 		fmt.Println(dataMap.Error)
 		return
 	}
 	fmt.Println()
-	fmt.Printf("%+v",dataMap.Result)
+	fmt.Printf("%+v", dataMap.Result)
 }

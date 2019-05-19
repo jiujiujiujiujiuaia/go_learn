@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"learn_go_demo/封装/common"
-	"learn_go_demo/封装/structs"
+	"go_learn/封装/common"
+	"go_learn/封装/structs"
+
 	"reflect"
 )
 
@@ -22,8 +23,7 @@ func main() {
 	fmt.Println(user.Name)
 
 	//下面代码会报错,因为email成员变量没有使用权
-	a :=structs.User{"100","100"}
+	a := structs.User{"100", "100"}
 	fmt.Println(a.Name)
 
-
-	}
+}
