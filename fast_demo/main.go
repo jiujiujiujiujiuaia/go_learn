@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"os"
+	"strings"
 )
 
 type Receiver struct {
@@ -85,7 +85,25 @@ func main() {
 	//	fmt.Println(err)
 	//}
 	//fmt.Println(teacherIdList)
-	for a := range os.Args {
-		fmt.Println(a)
+	//for a := range os.Args {
+	//	fmt.Println(a)
+	//}
+	//fmt.Println(len("[error_code] = %d   "))
+	//maps := make(map[int]int)
+	//for i := 0; i < 10; i++ {
+	//	maps[i] = i
+	//}
+	//
+	//for key, value := range maps {
+	//	fmt.Printf("%v:%v \n ", key, value)
+	//}
+	//
+	//fmt.Println("a \n  b \n")
+	//a := fmt.Sprintf("http://10.56.230.122:8090/error/apply?server_name=go_%s&user_name=%s", "bingo_test", "username")
+	//fmt.Println(a)
+
+	a := "aaa   aaa bb"
+	for _, v := range strings.Split(a, " ") {
+		fmt.Println(v)
 	}
 }
