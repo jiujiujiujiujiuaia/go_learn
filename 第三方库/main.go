@@ -1,9 +1,11 @@
-package main
+package 第三方库
 
 import "flag"
 import "fmt"
 import "strconv"
+
 type percentage float32
+
 func (p *percentage) Set(s string) error {
 	v, err := strconv.ParseFloat(s, 32)
 	*p = percentage(v)
