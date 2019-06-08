@@ -6,14 +6,67 @@ import (
 	"time"
 )
 
-//go程序并发执行的有点诡异啊
-//竟然main函数会早于协程结束
-//golang 中倡导用通信来共享数据，而不是通过共享数据来进行通信
+//go程序并发执行的有点诡异啊,竟然main函数会早于协程结束(暂时没理解为什么，只知道如何让main等待)
+
 func main() {
-	syncLock()
+	golangNotify()
 }
 
 var commonInt = 1
+
+//golang 中倡导用通信来共享数据，而不是通过共享数据来进行通信
+//比如有一个监控线程在后台跑着，主线程可以发消息通知监控线程停止，在java中就只有共享内存然后轮询查看某个flag有没有改变
+//golang中是用通信的方式解决
+func golangNotify() {
+	stop := make(chan bool)
+
+	go func() {
+		for {
+			select {
+			case <-stop:
+				fmt.Println("监控退出，停止了...")
+				return
+			default:
+				fmt.Println("goroutine监控中...")
+				time.Sleep(1 * time.Second)
+			}
+		}
+	}()
+
+	time.Sleep(10 * time.Second)
+	fmt.Println("可以了，通知监控停止")
+	stop <- true
+	//为了检测监控过是否停止，如果没有监控输出，就表示停止了
+	time.Sleep(5 * time.Second)
+}
+
+//缓冲信道和非缓冲信道的区别
+//非缓冲信道只负责数据的流入流出，不负责存储，因此只流入或者只流出就会导致死锁
+//缓冲信道有了储存数据的能力，不超过其存储的上限就不会阻塞goroutine，到了上限，就要从信道中取出来了，一旦没有取出来，就死锁
+func bufferChannelAndNoBufferChannel() {
+	ch := make(chan int, 2)
+	ch <- 1
+	ch <- 2
+	//打开下面一行的注释就会死锁
+	//ch <- 3
+}
+
+//常见的主线程阻塞，等待其他线程完成任务
+func otherDoWork(ch chan int) {
+	fmt.Println("其他线程开始任务")
+	time.Sleep(3 * time.Second)
+	fmt.Println("其他线程完成任务")
+	ch <- 0
+}
+
+func fakeMain() {
+	ch := make(chan int, 1)
+	fmt.Println("main等待其他线程完成任务")
+	go otherDoWork(ch)
+	<-ch
+	fmt.Println("切换回main")
+
+}
 
 //互斥锁的使用
 func syncLock() {
@@ -41,6 +94,7 @@ func syncLock() {
 	fmt.Println(commonInt)
 }
 
+//golang中的信道可以设置是读取还是写入还是默认的双向
 func chanTypeUsage() {
 	var ch1 chan int   //双向
 	var ch2 chan<- int //单向写入

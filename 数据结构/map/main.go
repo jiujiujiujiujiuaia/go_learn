@@ -29,6 +29,8 @@ func main() {
 		p, _ := strconv.Atoi(os.Args[i])
 		switch p {
 		case 1:
+			a := maps["ycw"]
+			fmt.Printf("address %p\n", &a)
 			passMapStruct(maps)
 			passSliceStruct(slices)
 		case 2:
@@ -75,13 +77,23 @@ func passMapStruct(maps map[string]util.Student) {
 	util.PrintGap("函数间传递map结构体")
 	fmt.Println(maps)
 	a := maps["ycw"]
+	fmt.Printf("address %p\n", &a)
 	a.Age = "99"
 	fmt.Println(maps)
 }
+
+func passMapStructPoint(maps map[string]*util.Student) {
+	util.PrintGap("函数间传递map结构体指针")
+	fmt.Println(maps)
+	maps["ycw"].Age = "100"
+	fmt.Println(maps)
+}
+
 func passSliceStruct(slices []util.Student) {
 	util.PrintGap("函数间传递切片结构体")
 	fmt.Println(slices)
 	slices[0].Age = "99"
 	fmt.Println(slices)
-	util.PrintGap("总结：使用map结构体最好使用map*struct，方便函数间传递，还可以直接访问成员变量")
+	util.PrintGap("总结：使用map结构体最好使用map*struct，方便函数间传递，还可以直接访问成员变量(map存储基本" +
+		"类型时可以在传递函数间修改)")
 }

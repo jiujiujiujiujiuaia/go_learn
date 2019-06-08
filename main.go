@@ -102,8 +102,30 @@ func main() {
 	//a := fmt.Sprintf("http://10.56.230.122:8090/error/apply?server_name=go_%s&user_name=%s", "bingo_test", "username")
 	//fmt.Println(a)
 
-	a := "aaa   aaa bb"
-	for _, v := range strings.Split(a, " ") {
-		fmt.Println(v)
+	//a := "aaa   aaa bb"
+	//for _, v := range strings.Split(a, " ") {
+	//	fmt.Println(v)
+	//}
+
+	//handled := `spp_k12_logic_status_svr spp_k12_online_logic_svr spp_k12_txcloud_hls_auth_svr k12_edu_msg_center k12_edu_online_userlist k12_edu_info_write_svr k12_edu_cs_class_interaction k12_edu_info_read_svr k12_edu_enter_live_auth`
+	handled := `spp_k12_txcloud_proxy_svr k12_video_audit spp_k12_logic_status_svr spp_k12_online_logic_svr spp_k12_txcloud_hls_auth_svr k12_edu_msg_center k12_edu_online_userlist k12_edu_info_write_svr k12_edu_cs_class_interaction k12_edu_info_read_svr k12_edu_enter_live_auth`
+	target := `k12_edu_all_agent k12_edu_course_write_svr k12_edu_info_read_svr k12_edu_info_write_svr k12_edu_msg_center k12_edu_online_userlist k12_video_audit spp_edu_cs_interface spp_k12_logic_status_svr spp_k12_online_logic_svr spp_k12_txcloud_hls_auth_svr spp_k12_txcloud_proxy_svr`
+	a := strings.Split(handled, " ")
+	b := strings.Split(target, " ")
+	fmt.Println("handle = ", len(a))
+	fmt.Println("target = ", len(b))
+	handle_map := make(map[string]string)
+	target_map := make(map[string]string)
+	for _, v := range a {
+		handle_map[v] = v
+	}
+	for _, v := range b {
+		target_map[v] = v
+	}
+
+	for k, _ := range target_map {
+		if _, ok := handle_map[k]; !ok {
+			fmt.Println(k)
+		}
 	}
 }

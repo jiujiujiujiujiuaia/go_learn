@@ -9,6 +9,16 @@ import (
 
 //1.建议多使用切片,仅仅复制三个字段(指向底层数组的指针,长度,容量),就可以实现函数间的传递,并且可以修改
 //2.切片和数组应该都是引用类型，也就是在函数间传递过程中修改了值，这种修改是永久的（也就是使用指针修改的一样）
+
+var students []util.Student
+
+func init() {
+	students = []util.Student{
+		{"kobe", ""},
+		{"ycw", ""},
+	}
+}
+
 func main() {
 	s1 := []int{1, 2, 3, 4, 5}
 	for i := 1; i < len(os.Args); i++ {
@@ -22,6 +32,8 @@ func main() {
 			iterable(s1)
 		case 4:
 			sliceAndStruct()
+			fmt.Println(students)
+			util.PrintGap("可以")
 		case 5:
 			initUsage()
 		case 6:
@@ -88,21 +100,16 @@ func iterable(s1 []int) {
 	util.PrintSliceMember(s1, "s1")
 }
 
-func modifyStruct(studengs []util.Student) {
-	for i := 0; i < len(studengs); i++ {
-		studengs[i].Age = "100"
+func modifyStruct(students []util.Student) {
+	for i := 0; i < len(students); i++ {
+		students[i].Age = "100"
 	}
 }
 
 func sliceAndStruct() {
 	util.PrintGap("slice中保存结构体，函数间传递可以通过切片索引修改吗？")
-	studengs := []util.Student{
-		{"kobe", ""},
-		{"ycw", ""},
-	}
-	fmt.Println(studengs)
-	modifyStruct(studengs)
-	fmt.Println(studengs)
+	fmt.Println(students)
+	modifyStruct(students)
 }
 
 func newAndMake() {
