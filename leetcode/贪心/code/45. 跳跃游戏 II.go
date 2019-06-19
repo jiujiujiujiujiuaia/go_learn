@@ -1,5 +1,8 @@
-package main
+package code
 
+/*
+	典型的贪心算法
+*/
 import "fmt"
 
 func main() {
