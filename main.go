@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
 type Receiver struct {
 	PhoneNum string
@@ -108,24 +105,69 @@ func main() {
 	//}
 
 	//handled := `spp_k12_logic_status_svr spp_k12_online_logic_svr spp_k12_txcloud_hls_auth_svr k12_edu_msg_center k12_edu_online_userlist k12_edu_info_write_svr k12_edu_cs_class_interaction k12_edu_info_read_svr k12_edu_enter_live_auth`
-	handled := `spp_k12_txcloud_proxy_svr k12_video_audit spp_k12_logic_status_svr spp_k12_online_logic_svr spp_k12_txcloud_hls_auth_svr k12_edu_msg_center k12_edu_online_userlist k12_edu_info_write_svr k12_edu_cs_class_interaction k12_edu_info_read_svr k12_edu_enter_live_auth`
-	target := `k12_edu_all_agent k12_edu_course_write_svr k12_edu_info_read_svr k12_edu_info_write_svr k12_edu_msg_center k12_edu_online_userlist k12_video_audit spp_edu_cs_interface spp_k12_logic_status_svr spp_k12_online_logic_svr spp_k12_txcloud_hls_auth_svr spp_k12_txcloud_proxy_svr`
-	a := strings.Split(handled, " ")
-	b := strings.Split(target, " ")
-	fmt.Println("handle = ", len(a))
-	fmt.Println("target = ", len(b))
-	handle_map := make(map[string]string)
-	target_map := make(map[string]string)
-	for _, v := range a {
-		handle_map[v] = v
-	}
-	for _, v := range b {
-		target_map[v] = v
-	}
+	//handled := `spp_k12_txcloud_proxy_svr k12_video_audit spp_k12_logic_status_svr spp_k12_online_logic_svr spp_k12_txcloud_hls_auth_svr k12_edu_msg_center k12_edu_online_userlist k12_edu_info_write_svr k12_edu_cs_class_interaction k12_edu_info_read_svr k12_edu_enter_live_auth`
+	//target := `k12_edu_all_agent k12_edu_course_write_svr k12_edu_info_read_svr k12_edu_info_write_svr k12_edu_msg_center k12_edu_online_userlist k12_video_audit spp_edu_cs_interface spp_k12_logic_status_svr spp_k12_online_logic_svr spp_k12_txcloud_hls_auth_svr spp_k12_txcloud_proxy_svr`
+	//a := strings.Split(handled, " ")
+	//b := strings.Split(target, " ")
+	//fmt.Println("handle = ", len(a))
+	//fmt.Println("target = ", len(b))
+	//handle_map := make(map[string]string)
+	//target_map := make(map[string]string)
+	//for _, v := range a {
+	//	handle_map[v] = v
+	//}
+	//for _, v := range b {
+	//	target_map[v] = v
+	//}
+	//
+	//for k, _ := range target_map {
+	//	if _, ok := handle_map[k]; !ok {
+	//		fmt.Println(k)
+	//	}
+	//}
+	a := []int{361,
+		355,
+		353,
+		355,
+		336,
+		336,
+		315,
+		373,
+		361,
+		352,
+		342,
+		337,
+		334,
+		351,
+		314,
+		337,
+		377,
+		335,
+		352,
+		353,
+		341,
+		312,
+		343,
+		329,
+		342,
+		392,
+		334,
+		353,
+		351}
 
-	for k, _ := range target_map {
-		if _, ok := handle_map[k]; !ok {
-			fmt.Println(k)
+	var total int
+	var max int
+	var min int
+	min = a[0]
+	for _, i := range a {
+		total += i
+		if i > max {
+			max = i
+		}
+		if i < min {
+			min = i
 		}
 	}
+	ave := total / len(a)
+	fmt.Println(len(a), ave, min, max)
 }

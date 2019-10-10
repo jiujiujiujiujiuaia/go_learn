@@ -7,16 +7,18 @@ import (
 )
 
 //go程序并发执行的有点诡异啊,竟然main函数会早于协程结束(暂时没理解为什么，只知道如何让main等待)
-
 func main() {
 	golangNotify()
 }
 
 var commonInt = 1
 
-//golang 中倡导用通信来共享数据，而不是通过共享数据来进行通信
-//比如有一个监控线程在后台跑着，主线程可以发消息通知监控线程停止，在java中就只有共享内存然后轮询查看某个flag有没有改变
+//1.golang 中倡导用通信来共享数据，而不是通过共享数据来进行通信
+//2.比如有一个监控线程在后台跑着，主线程可以发消息通知监控线程停止，在java中就只有共享内存然后轮询查看某个flag有没有改变
 //golang中是用通信的方式解决
+//3.select的多路复用，它的每个case都是一个通信操作，原则就是哪个case的通信操作可以执行就执行哪个，
+//如果同时有多个可以执行的case，那么就随机选择一个执行
+//如果没有default的话，select是会阻塞的
 func golangNotify() {
 	stop := make(chan bool)
 
@@ -33,7 +35,7 @@ func golangNotify() {
 		}
 	}()
 
-	time.Sleep(10 * time.Second)
+	time.Sleep(5 * time.Second)
 	fmt.Println("可以了，通知监控停止")
 	stop <- true
 	//为了检测监控过是否停止，如果没有监控输出，就表示停止了

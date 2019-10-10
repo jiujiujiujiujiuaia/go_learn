@@ -1,4 +1,4 @@
-package code
+package 贪心
 
 import (
 	"fmt"

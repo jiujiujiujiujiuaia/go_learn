@@ -1,7 +1,7 @@
 /*
 9.整数快速划分
 */
-package code
+package main
 
 import (
 	"fmt"

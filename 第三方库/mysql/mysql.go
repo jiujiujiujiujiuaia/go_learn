@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	dbSourceName := "root:123456@tcp(127.0.0.1:3306)/test?charset=utf8"
+	dbSourceName := "root:123456@tcp(127.0.0.1:3306)/快速测试?charset=utf8"
 	dbIns, err := xorm.NewEngine("mysql", dbSourceName)
 	if err != nil {
 		fmt.Println(err)

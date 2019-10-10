@@ -1,18 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type stackStruct struct {
 	con  []string
 	tail int
-}
-
-var stack *stackStruct
-
-func init() {
-	stack = new(stackStruct)
-	stack.con = make([]string, 0)
-	stack.tail = -1
 }
 
 func (s *stackStruct) push(item string) {
@@ -35,7 +29,12 @@ func (s *stackStruct) isEmpty() bool {
 	}
 }
 
+//这个题目，其实是有效的括号的子括号也是有效的，因此从内部开始往外消除
+//而栈的特性是先进的后出，pop出来的是栈顶的元素刚刚好是最内部的元素。
 func isValid(s string) bool {
+	stack := new(stackStruct)
+	stack.con = make([]string, 0)
+	stack.tail = -1
 	maps := map[string]string{
 		"{": "}", "(": ")", "[": "]"}
 	for i := 0; i < len(s); i++ {
@@ -57,6 +56,6 @@ func isValid(s string) bool {
 }
 
 func main() {
-	fmt.Println(isValid("[{[]{}}]{}[][]]"))
+	fmt.Println(isValid("[{[]{}}]{}[][]"))
 
 }

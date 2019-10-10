@@ -3,12 +3,7 @@
 	1.slow-fast法找到链表中间节点
 	2.if判断中是node.next != nil 还是 node ！= nil 取决于特定的情况
 */
-package code
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+package main
 
 // 解法一：把这道题变成之前做过的，遍历一遍用数组存储，然后双指针（可能不是面试官想考察的点）
 func IsPalindrome1(head *ListNode) bool {

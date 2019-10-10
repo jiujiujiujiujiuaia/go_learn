@@ -1,0 +1,50 @@
+package com.tencent.edu.k12.pb.k12_admin_apply_course_svr;
+
+//批量报名接口
+message BatchApplyCourseWhiteReq {
+	repeated ApplyCourseInfo apply_course_info = 1;
+	optional string operator = 2;
+	optional string task_name = 3;
+}
+
+message BatchApplyCourseWhiteResp {
+    
+}
+
+message ApplyCourseInfo{
+    optional int64 uid_type = 1;  //用户类型 0=qq 2=微信 20001=手机号格式类型
+    optional int64 uid = 2;       //用户账号
+    optional int64 cid = 3;       // 课程id
+    optional string operator = 4;  // 操作人
+    optional string reason = 5;    //申请原因 
+}
+
+//批量报名的接口重试
+message BatchApplyCourseWhiteRetryReq{
+	optional int64 task_id = 1;
+}
+
+message BatchApplyCourseWhiteRetryResp{
+}
+
+//@desc=批量值课接口
+//@header_protocol=qapp
+//@l5=1:1
+//@owner=liamcwyu
+//@scm=k12_admin_apply_course_svr
+//@serviceAddr=tcp://10.56.230.122:33526
+//@serviceName=k12_admin_apply_course_svr
+//@serviceType=qapp
+//@test_ip_port=10.56.230.122:33555
+//@test_l5=2:2
+//@trans_protocol=tcp
+//@wiki=k12_admin_apply_course_svr
+service k12_admin_apply_course_svr {
+    //@methodClientMonitorAttrs = [0,0,0,0,0,0,0,0,0,0]
+	rpc BatchApplyCourseWhite(BatchApplyCourseWhiteReq) returns (BatchApplyCourseWhiteResp);
+	
+	//@methodClientMonitorAttrs = [0,0,0,0,0,0,0,0,0,0]
+	rpc BatchApplyCourseWhiteRetry(BatchApplyCourseWhiteRetryReq) returns (BatchApplyCourseWhiteRetryResp);
+	
+}
+
