@@ -1,6 +1,3 @@
-/*
-dp
-*/
 package main
 
 func LengthOfLIS(nums []int) int {

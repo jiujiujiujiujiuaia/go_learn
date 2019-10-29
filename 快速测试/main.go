@@ -29,4 +29,25 @@ func main() {
 
 	dir, _ := filepath.Abs("./plug/")
 	fmt.Println(dir)
+
+	a := []int{1, 2, 3, 4, 5, 6}
+	temp1 := a[:1]
+	fmt.Println(cap(temp1), len(temp1), temp1)
+	b := append(a[:1], 3, 4, 5, 7)
+	fmt.Println(a)
+	fmt.Println(b)
+
+	slice := []int{10, 20, 30, 40}
+	newSlice := append(slice, 50)
+	fmt.Printf("Before slice = %v, Pointer = %p, len = %d, cap = %d\n", slice, &slice, len(slice), cap(slice))
+	fmt.Printf("Before newSlice = %v, Pointer = %p, len = %d, cap = %d\n", newSlice, &newSlice, len(newSlice), cap(newSlice))
+	newSlice[1] += 10
+	fmt.Printf("After slice = %v, Pointer = %p, len = %d, cap = %d\n", slice, &slice, len(slice), cap(slice))
+	fmt.Printf("After newSlice = %v, Pointer = %p, len = %d, cap = %d\n", newSlice, &newSlice, len(newSlice), cap(newSlice))
+
+	tempSolution := make([][]int, 2)
+
+	adsd := [][]int{{1, 2}, {3, 4}}
+	copy(tempSolution, adsd)
+	fmt.Println(tempSolution)
 }
