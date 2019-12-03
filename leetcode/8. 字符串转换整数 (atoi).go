@@ -5,12 +5,12 @@ import (
 	"strings"
 )
 
+//最大值,math库中有这些常量！！！math.MaxInt8
 const INT_MAX = int(int32(^uint32(0) >> 1))
 const INT_MIN = int(-int32(^uint32(0)>>1) - 1)
 
 func main() {
-	str :=
-		"9223372036854775808"
+	str := "9223372036854775808"
 	fmt.Println(myAtoi(str))
 }
 
