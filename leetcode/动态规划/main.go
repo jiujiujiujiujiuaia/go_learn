@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+//以完成 5 53 120 121 122 221
+//未完成 0  70 152 300
 func main() {
 	param := []int{10, 9, 2, 5, 3, 7, 101, 18}
 	fmt.Println(LengthOfLIS(param))
