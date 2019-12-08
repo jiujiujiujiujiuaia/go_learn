@@ -47,5 +47,5 @@ golang中的string类型类似java的String类，都是不可变的，也就是�
 ，但是你可以通过底层[]byte,[]rune获得并修改，byte是字节，rune是字符（一个字符可能由多个字节组成）
 
 ## 5.go语言中的反射i
-sss1
+sss111
 11111test
