@@ -11,7 +11,7 @@ type GetAllCourseReq struct {
 	TeacherName string
 }
 
-func main() {
+func mains() {
 	fmt.Println("# Start new stream: ip:129.204.8.88:44454,125.220.29.210:55689")
 	fmt.Println("2019-09-21 16:37:26| cli(129.204.8.88:44454)   -> ser(125.220.29.210:55689) | 应用层协议内容")
 	fmt.Println("2019-09-21 16:37:26| ser(125.220.29.210:55689) -> cli(129.204.8.88:44454)   | 应用层协议内容")

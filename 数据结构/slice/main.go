@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go_learn/util"
+	
 	"os"
 	"strconv"
 )
@@ -42,6 +42,7 @@ func main() {
 	}
 
 }
+
 
 func initUsage() {
 	fmt.Printf(util.Gap, "切片初始化的方式")
@@ -121,3 +122,6 @@ func newAndMake() {
 	util.PrintGap("make使用于应用类型如slice,map,channel,分配内存还初始化")
 	util.PrintGap("new 用于任何类型，但是只复制分配内存 -》 fmt.Println((*s2)[0]) 报错")
 }
+
+
+
