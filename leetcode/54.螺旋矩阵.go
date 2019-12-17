@@ -42,11 +42,17 @@ package main
  */
 
 // @lc code=start
-func spiralOrder(matrix [][]int) []int {
+
+//解法一：设置方向，每到边界或者已经走过的路就调转方向
+func spiralOrder1(matrix [][]int) []int {
+	if len(matrix) == 0 {
+		return nil
+	}
+
 	direction := [][]int{{0, 1}, {1, 0}, {0, -1}, {-1, 0}}
 	res := make([]int, 0)
 	route := make([][]bool, len(matrix))
-	for i := 0; i < len(matrix[0]); i++ {
+	for i := 0; i < len(matrix); i++ {
 		route[i] = make([]bool, len(matrix[0]))
 	}
 
@@ -54,17 +60,51 @@ func spiralOrder(matrix [][]int) []int {
 	d := 0
 	row, col := len(matrix), len(matrix[0])
 	var iNext, jNext int
+	//终止条件就是调转方向后还是走到已经走过的格子中去了
 	for !checkBorder(i, j, row, col) && !route[i][j] {
+		//提前算下一次的坐标，就是先判断是否有走偏，走偏了立马转换方向纠正过来
 		if iNext, jNext = i+direction[d][0], j+direction[d][1]; checkBorder(iNext, jNext, row, col) || route[iNext][jNext] {
 			if d+1 == 4 {
 				d = 0
 			} else {
 				d++
 			}
+			//如果碰到了边界或者已经走过的地方，需要转换方向了
 			iNext, jNext = i+direction[d][0], j+direction[d][1]
 		}
 		res = append(res, matrix[i][j])
 		route[i][j] = true
+		i, j = iNext, jNext
+	}
+	return res
+}
+
+//解法一的代码纯净版本
+func spiralOrder(matrix [][]int) []int {
+	if len(matrix) == 0 {
+		return nil
+	}
+
+	direction := [][]int{{0, 1}, {1, 0}, {0, -1}, {-1, 0}}
+	res := make([]int, 0)
+	route := make([][]bool, len(matrix))
+	for i := 0; i < len(matrix); i++ {
+		route[i] = make([]bool, len(matrix[0]))
+	}
+
+	i, j := 0, 0
+	d := 0
+	row, col := len(matrix), len(matrix[0])
+	var iNext, jNext int
+	//终止条件就是调转方向后还是走到已经走过的格子中去了
+	for cnt := 0; cnt < len(matrix)*len(matrix[0]); cnt++ {
+		res = append(res, matrix[i][j])
+		route[i][j] = true
+		if iNext, jNext = i+direction[d][0], j+direction[d][1]; checkBorder(iNext, jNext, row, col) || route[iNext][jNext] {
+			d = (d + 1) % 4
+			//如果碰到了边界或者已经走过的地方，需要转换方向了
+			iNext, jNext = i+direction[d][0], j+direction[d][1]
+		}
 		i, j = iNext, jNext
 	}
 	return res
@@ -75,11 +115,6 @@ func checkBorder(i, j, row, col int) bool {
 		return true
 	}
 	return false
-}
-
-func main() {
-	a := [][]int{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}
-	spiralOrder(a)
 }
 
 // @lc code=end
