@@ -31,8 +31,26 @@ package main /*
  */
 
 // @lc code=start
-func permute(nums []int) [][]int {
+var permuteResult [][]int
 
+func permute(nums []int) [][]int {
+	permuteResult = make([][]int, 0)
+	recurisive(nums, []int{})
+	return permuteResult
+}
+
+func recurisive(nums []int, value []int) {
+	if len(nums) == 0 {
+		permuteResult = append(permuteResult, value)
+	}
+
+	var newValue []int
+	for i := 0; i < len(nums); i++ {
+		tempNum := make([]int, len(nums))
+		copy(tempNum, nums)
+		newValue = append(value, nums[i])
+		recurisive(append(tempNum[:i], tempNum[i+1:]...), newValue)
+	}
 }
 
 // @lc code=end

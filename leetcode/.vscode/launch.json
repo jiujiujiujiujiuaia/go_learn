@@ -6,7 +6,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${file}",
+            "program": "${fileDirname}",
             "env": {},
             "args": [],
             "cwd": "./.vscode",
