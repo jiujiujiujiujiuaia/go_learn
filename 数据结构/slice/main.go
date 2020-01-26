@@ -44,6 +44,22 @@ func main() {
 
 }
 
+//迭代删除
+//如果要删除的时候索引不移动，如果不删除则移动
+func IterableAndDelete() {
+	ageList := []int{1, 3, 7, 7, 8, 2, 5}
+
+	//遍历删除6以下的
+	for i := 0; i < len(ageList); {
+		if ageList[i] < 6 {
+			ageList = append(ageList[:i], ageList[i+1:]...)
+		} else {
+			i++
+		}
+	}
+	fmt.Printf("after del:%v", ageList)
+}
+
 func initUsage() {
 	fmt.Printf(util.Gap, "切片初始化的方式")
 	s2 := make([]int, 5)

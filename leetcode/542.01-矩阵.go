@@ -1,5 +1,7 @@
 package main
 
+import "container/list"
+
 import "math"
 
 /*
@@ -66,62 +68,72 @@ import "math"
  */
 
 // @lc code=start
+
+//思路分析：暴力的办法就是每到一个值为1的点，就去搜索整个数组，来拿到到0的最小值
+//广度搜索的思路就是是要先算临近的点，因为稍远的点是由临近的点得出的
+
+//也就是每个点只有一次机会进入路径组
+
+//思路2：这个题的dp思路有意思，先只比较一个元素和他自己的左和上的元素最小值，
+//然后再比较比较一个元素和他自己的右和下的元素最小值
+//这样比的好处是，在比任何一个元素时，自己的邻居元素已经被算出来了，可以用记忆化搜索的方式理解。
+
 type point struct {
 	x_axis   int
 	y_axis   int
 	distance int
 }
 
-var col int
-var row int
-var matrixRoute [][]bool
+var updateMatrixCol int
+var updateMatrixRow int
+var routeMap [][]bool
 
 func updateMatrix(matrix [][]int) [][]int {
 	if len(matrix) == 0 {
-		return nil
+		return [][]int{}
 	}
-	col = len(matrix)
-	row = len(matrix[0])
-	res := make([][]int, col)
-	for i := 0; i < col; i++ {
-		res[i] = make([]int, row)
-	}
-
-	for i := 0; i < col; i++ {
-		for j := 0; j < row; j++ {
-			if matrix[i][j] == 1 {
-				res[i][j] = math.MaxInt64
-			}
-		}
+	updateMatrixRow = len(matrix)
+	updateMatrixCol = len(matrix[0])
+	routeMap = make([][]bool, updateMatrixRow)
+	for i := 0; i < updateMatrixRow; i++ {
+		routeMap[i] = make([]bool, updateMatrixCol)
 	}
 
-	//solve zero
-	for i := 0; i < col; i++ {
-		for j := 0; j < row; j++ {
+	queue := list.New()
+	for i := 0; i < updateMatrixRow; i++ {
+		for j := 0; j < updateMatrixCol; j++ {
 			if matrix[i][j] == 0 {
-				solveZeroPoint(matrix, res, i, j)
+				queue.PushBack(point{
+					x_axis: i,
+					y_axis: j,
+				})
+				routeMap[i][j] = true
+			} else {
+				matrix[i][j] = math.MaxInt32
+			}
+		}
+	}
+	vectors := [][]int{{1, 0}, {-1, 0}, {0, 1}, {0, -1}}
+
+	for queue.Len() > 0 {
+		headPoint := queue.Front()
+		queue.Remove(queue.Front())
+		x, y := headPoint.Value.(point).x_axis, headPoint.Value.(point).y_axis
+		for _, vector := range vectors {
+			nextX, nextY := x+vector[0], y+vector[1]
+			if nextX > -1 && nextX < updateMatrixRow &&
+				nextY > -1 && nextY < updateMatrixCol && !routeMap[nextX][nextY] {
+				queue.PushBack(point{
+					x_axis: nextX,
+					y_axis: nextY,
+				})
+				routeMap[nextX][nextY] = true
+				matrix[nextX][nextY] = matrix[x][y] + 1
 			}
 		}
 	}
 
-	//solve one
-	for i := 0; i < col; i++ {
-		for j := 0; j < row; j++ {
-			if matrix[i][j] == 1 {
-				initMatrixRoute(col, row)
-				solveOnePoint(matrix, res, i, j)
-			}
-		}
-	}
-
-	// for i := 0; i < col; i++ {
-	// 	for j := 0; j < row; j++ {
-	// 		initMatrixRoute(col, row)
-	// 		d := solveUpdateMatrix(matrix, i, j)
-	// 		res[i][j] = d
-	// 	}
-	// }
-	return res
+	return matrix
 }
 
 func min(a, b int) int {
@@ -131,92 +143,5 @@ func min(a, b int) int {
 		return b
 	}
 }
-
-func solveOnePoint(matrix [][]int, res [][]int, i, j int) int {
-	if i < 0 || j < 0 || i >= col || j >= row {
-		return math.MaxInt64
-	}
-
-	if matrixRoute[i][j] {
-		return res[i][j]
-	}
-
-	matrixRoute[i][j] = true
-	if matrix[i][j] == 1 && res[i][j] != math.MaxInt64 {
-		return res[i][j]
-	}
-
-	temp1 := min(solveOnePoint(matrix, res, i+1, j), solveOnePoint(matrix, res, i-1, j))
-	temp2 := min(temp1, solveOnePoint(matrix, res, i, j+1))
-	res[i][j] = min(temp2, solveOnePoint(matrix, res, i, j-1)) + 1
-	return res[i][j]
-}
-
-func solveZeroPoint(matrix [][]int, res [][]int, i, j int) {
-	if i+1 < col && matrix[i+1][j] == 1 {
-		res[i+1][j] = 1
-	}
-
-	if i-1 > -1 && matrix[i-1][j] == 1 {
-		res[i-1][j] = 1
-	}
-
-	if j+1 < row && matrix[i][j+1] == 1 {
-		res[i][j+1] = 1
-	}
-
-	if j-1 > -1 && matrix[i][j-1] == 1 {
-		res[i][j-1] = 1
-	}
-}
-
-// func solveUpdateMatrix(matrix [][]int, i, j int) int {
-// 	queue := list.New()
-// 	p := point{
-// 		x_axis:   i,
-// 		y_axis:   j,
-// 		distance: 0,
-// 	}
-// 	queue.PushBack(p)
-// 	for queue.Len() != 0 {
-// 		head := queue.Front()
-// 		queue.Remove(head)
-// 		x := head.Value.(point).x_axis
-// 		y := head.Value.(point).y_axis
-// 		matrixRoute[x][y] = true
-// 		if matrix[x][y] == 1 {
-// 			push(queue, head.Value.(point))
-// 		} else {
-// 			return head.Value.(point).distance
-// 		}
-// 	}
-// 	return 0
-// }
-
-func initMatrixRoute(col, row int) {
-	matrixRoute = make([][]bool, col)
-	for i := 0; i < len(matrixRoute); i++ {
-		matrixRoute[i] = make([]bool, row)
-	}
-}
-
-// func push(queue *list.List, p point) {
-// 	x, y, d := p.x_axis, p.y_axis, p.distance
-// 	if x+1 < col && !matrixRoute[x+1][y] {
-// 		queue.PushBack(point{x_axis: x + 1, y_axis: y, distance: d + 1})
-// 	}
-
-// 	if y+1 < row && !matrixRoute[x][y+1] {
-// 		queue.PushBack(point{x_axis: x, y_axis: y + 1, distance: d + 1})
-// 	}
-
-// 	if x-1 > -1 && !matrixRoute[x-1][y] {
-// 		queue.PushBack(point{x_axis: x - 1, y_axis: y, distance: d + 1})
-// 	}
-
-// 	if y-1 > -1 && !matrixRoute[x][y-1] {
-// 		queue.PushBack(point{x_axis: x, y_axis: y - 1, distance: d + 1})
-// 	}
-// }
 
 // @lc code=end

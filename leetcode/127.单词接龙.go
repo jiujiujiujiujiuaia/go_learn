@@ -1,6 +1,6 @@
 package main
 
-import "math"
+import "container/list"
 
 /*
  * @lc app=leetcode.cn id=127 lang=golang
@@ -62,54 +62,55 @@ import "math"
  */
 
 // @lc code=start
-var min int
 
-//解法一 纯回溯递归超时了，栈太深了
+//解法一 bfs 把单词接龙的链路抽象成寻找最短路径
+
+//使用map记录路径会有一种情况，就是失败的路径把需要用的单词给占住了？
+//不会，假设这个单词是必经点，如果搜索到了这个单词，必定可以走向最终的答案
+
+//！！1.重点：使用广度优先最大的好处，因为是一层一层的遍历，因此只要是发现的第一条路径，那就是最短的路径
+//map的目的是避免出现回环，也就是a到了b，然后b又到了a，会死循环
 func ladderLength(beginWord string, endWord string, wordList []string) int {
-	min = math.MaxInt32
-	backTraceLadderLength(beginWord, endWord, wordList, 1)
-	if min == math.MaxInt32 {
-		return 0
-	}
-	return min
-	// best := 0
-	// for _,word := range wordList{
-	// 	if judgeTwoWordIsOk(word, beginWord) {
-	// 		backTraceLadderLength(word,endWord,)
-	// 	}
-	// }
-}
+	transformations, routeMap := preHandle(wordList)
+	queue := list.New()
+	queue.PushBack(map[string]int{beginWord: 1})
+	for queue.Len() > 0 {
+		head := queue.Front()
+		queue.Remove(head)
+		value := head.Value.(map[string]int)
 
-func backTraceLadderLength(beginWord string, endWord string, wordList []string, cnt int) {
-	if judgeTwoWordIsOk(beginWord, endWord) {
-		for _, word := range wordList {
-			if word == endWord {
-				if min > cnt {
-					min = cnt
+		for key, val := range value {
+			for i := 0; i < len(key); i++ {
+				patterm := key[:i] + "*" + key[i+1:]
+				if words, ok := transformations[patterm]; ok {
+					for _, word := range words {
+						if word == endWord {
+							return val + 1
+						}
+
+						if !routeMap[word] {
+							routeMap[word] = true
+							queue.PushBack(map[string]int{word: val + 1})
+						}
+					}
 				}
-				return
 			}
 		}
 	}
-
-	for index, word := range wordList {
-		if judgeTwoWordIsOk(word, beginWord) {
-			wordListTemp := make([]string, len(wordList))
-			copy(wordListTemp, wordList)
-			backTraceLadderLength(word, endWord, append(wordListTemp[:index], wordListTemp[index+1:]...), cnt+1)
-		}
-	}
-
+	return 0
 }
 
-func judgeTwoWordIsOk(word1, word2 string) bool {
-	cnt1 := 0
-	for index, _ := range word1 {
-		if word2[index] == word1[index] {
-			cnt1++
+func preHandle(wordList []string) (map[string][]string, map[string]bool) {
+	res := make(map[string][]string)
+	for _, word := range wordList {
+		for i := 0; i < len(word); i++ {
+			patterm := word[:i] + "*" + word[i+1:]
+			res[patterm] = append(res[patterm], word)
 		}
 	}
-	return (len(word1) - 1) == cnt1
+
+	routeMap := make(map[string]bool)
+	return res, routeMap
 }
 
 // @lc code=end

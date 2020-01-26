@@ -35,7 +35,31 @@ package main
 
 // @lc code=start
 func searchRange(nums []int, target int) []int {
+	l,r := 0,len(nums)-1
+	for l<=r{
+		mid := l + (r-l)/2
+		if nums[mid] == target{
+			return handleEqualCondition(nums,target,mid)
+		}else if nums[mid] > target{
+			r = mid - 1
+		}else{
+			l = mid + 1
+		}
+	}
 
+	return []int{-1,-1}
+}
+
+func handleEqualCondition(nums []int, target,index int)[]int{
+	l,h := index,index
+	for h < len(nums) - 1 && nums[h+1] == target{
+		h++
+	}
+
+	for l>0 && nums[l-1] == target{
+		l--
+	}
+	return []int{l,h}
 }
 
 // @lc code=end
