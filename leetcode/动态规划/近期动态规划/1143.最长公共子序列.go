@@ -1,4 +1,6 @@
-package main /*
+package main
+
+/*
  * @lc app=leetcode.cn id=1143 lang=golang
  *
  * [1143] 最长公共子序列
