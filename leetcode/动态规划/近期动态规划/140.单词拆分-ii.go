@@ -8,7 +8,7 @@ package main
 
 // @lc code=start
 
-//TODO 
+// TODO 
 //1.思考一下深度搜索（递归+备忘录怎么做这个题，以及网友说的如何剪植优化）
 //2.这个题的特例在下方，导致内存爆掉，如何优雅的处理（有人说自顶向下，研究下常用的自底和自顶区别）
 func wordBreak(s string, wordDict []string) []string {
