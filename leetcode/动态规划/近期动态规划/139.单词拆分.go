@@ -7,6 +7,8 @@ package main
  */
 
 // @lc code=start
+
+//解法一：迭代实现
 func wordBreak(s string, wordDict []string) bool {
 	dp := make([]bool, len(s)+1)
 	wordDictMap := make(map[string]bool)

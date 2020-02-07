@@ -1,5 +1,13 @@
 package main
 
+/*
+ * @lc app=leetcode.cn id=70 lang=golang
+ *
+ * [70] 爬楼梯
+ */
+
+// @lc code=start
+
 func climbStairs(n int) int {
 	if n == 0 {
 		return 0
@@ -12,3 +20,5 @@ func climbStairs(n int) int {
 	}
 	return dp[n]
 }
+
+// @lc code=end

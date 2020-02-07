@@ -8,7 +8,7 @@ package main
 
 // @lc code=start
 
-//喻淳玮你可真厉害，你怎么就知道要把
+//你可真厉害，你怎么就知道要把
 //两个最长公共子序列和这个形式联系在一起？厉害！
 func minDistance(word1 string, word2 string) int {
 	res := longestCommonSubsequences(word1, word2)
