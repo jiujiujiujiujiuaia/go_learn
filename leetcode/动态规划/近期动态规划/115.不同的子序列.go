@@ -14,8 +14,8 @@ func numDistinct(s string, t string) int {
 		dp[i][0] = 1
 	}
 
-	for i := 1; i <= len(dp); i++ {
-		for j := 1; j <= len(dp[0]); j++ {
+	for i := 1; i < len(dp); i++ {
+		for j := 1; j < len(dp[0]); j++ {
 			if s[i-1] == t[j-1] {
 				//如果s(i)与t(j)相同，那么用s(i)这个字符和不用s(i)这个字符的情况
 				dp[i][j] = dp[i-1][j-1] + dp[i-1][j]

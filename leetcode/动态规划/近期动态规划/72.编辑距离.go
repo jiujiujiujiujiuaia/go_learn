@@ -26,15 +26,38 @@ func minDistance(word1 string, word2 string) int {
 	}
 
 	//2.开始自底向上的递推
+	//这个代码更加简洁，可读性没那么好
+	// for i := 1; i < len(word1)+1; i++ {
+	// 	for j := 1; j < len(word2)+1; j++ {
+	// 		left := dp[i-1][j] + 1
+	// 		up := dp[i][j-1] + 1
+	// 		left_up := dp[i-1][j-1]
+	// 		if word1[i-1] != word2[j-1] {
+	// 			left_up++
+	// 		}
+	// 		dp[i][j] = min(left, up, left_up)
+	// 	}
+	// }
+
 	for i := 1; i < len(word1)+1; i++ {
 		for j := 1; j < len(word2)+1; j++ {
-			left := dp[i-1][j] + 1
-			up := dp[i][j-1] + 1
-			left_up := dp[i-1][j-1]
-			if word1[i-1] != word2[j-1] {
-				left_up++
+			//1.如果两个字符相同
+			if word1[i-1] == word2[j-1] {
+				//就算两个单词的第i和第j位相同，但是也不能直接
+				//dp[i][j] = dp[i-1][j-1]，因为可能会出现长度不匹配，
+				//需要执行删除或者插入的操作
+				left := dp[i-1][j] + 1
+				up := dp[i][j-1] + 1
+				left_up := dp[i-1][j-1]
+				dp[i][j] = min(left, up, left_up)
+			}else{
+				left := dp[i-1][j] + 1
+				up := dp[i][j-1] + 1
+				//2.如果两个字符不相同，则需要有替换这个操作
+				left_up := dp[i-1][j-1]+1
+				dp[i][j] = min(left, up, left_up)
 			}
-			dp[i][j] = min(left, up, left_up)
+			
 		}
 	}
 	return dp[len(word1)][len(word2)]

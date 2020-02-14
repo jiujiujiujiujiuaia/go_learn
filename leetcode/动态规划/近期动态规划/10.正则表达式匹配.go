@@ -38,7 +38,7 @@ func isMatch(s string, p string) bool {
 			}
 
 			//3.2 如果p当前字符是*，则看前面一个字符，如果前面一个字符与s当前字符不相同，可以抹去
-			if p[j-1] == '*' && j > 1 {
+			if p[j-1] == '*' {
 				if p[j-2] == '.' || p[j-2] == s[i-1] {
 					fmt.Println(i, j, dp[i][j-1], dp[i][j-2], dp[i-1][j])
 					//eg dp[i][j-2]解决的是s="a" p="aa*"  把前一个字符重复0次

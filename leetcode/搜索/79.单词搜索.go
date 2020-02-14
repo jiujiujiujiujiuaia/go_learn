@@ -40,6 +40,8 @@ var route [][]bool
 var col int
 var row int
 
+//典型的搜索类题目+回溯，有的题目是访问过这个节点后，不能再访问了。
+
 //解法一，这个应该算是暴力了，遍历所有的grid，然后每一个grid作为起点
 //深度优先遍历。
 //同时有一个map记录走过的路程，因为不能同一个字母用两次
@@ -81,13 +83,10 @@ func judgeWordIsExist(board [][]byte, i, j int, word string, strIndex int) bool 
 			judgeWordIsExist(board, i-1, j, word, strIndex) ||
 			judgeWordIsExist(board, i, j-1, word, strIndex) {
 			return true
-		} else {
-			route[i][j] = false
-			return false
 		}
-	} else {
-		return false
+		route[i][j] = false
 	}
+	return false
 }
 
 func checkBoard(i, j int) bool {

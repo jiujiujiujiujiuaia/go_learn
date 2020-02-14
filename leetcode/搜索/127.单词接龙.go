@@ -71,15 +71,20 @@ import "container/list"
 //！！1.重点：使用广度优先最大的好处，因为是一层一层的遍历，因此只要是发现的第一条路径，那就是最短的路径
 //map的目的是避免出现回环，也就是a到了b，然后b又到了a，会死循环
 func ladderLength(beginWord string, endWord string, wordList []string) int {
+	//1.预处理
 	transformations, routeMap := preHandle(wordList)
 	queue := list.New()
 	queue.PushBack(map[string]int{beginWord: 1})
+
 	for queue.Len() > 0 {
 		head := queue.Front()
 		queue.Remove(head)
 		value := head.Value.(map[string]int)
 
+		//2.队列中存储的是map，也可以是结构体，存储的是步数和单词
 		for key, val := range value {
+
+			//3.依次遍历单词每一位，看单词能够变成几种相似的
 			for i := 0; i < len(key); i++ {
 				patterm := key[:i] + "*" + key[i+1:]
 				if words, ok := transformations[patterm]; ok {
