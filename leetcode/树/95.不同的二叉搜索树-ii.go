@@ -16,8 +16,8 @@ package main
  * }
  */
 
-//这是一道好题啊！与96题相映成趣！
 
+//前置题目是95，这里是递归方法做的，还可以用动态规划，有空补上
 func generateTrees(n int) []*TreeNode {
 	if n <= 0 {
 		return []*TreeNode{}

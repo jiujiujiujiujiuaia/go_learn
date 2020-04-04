@@ -2,64 +2,40 @@ package main
 
 /*
  * @lc app=leetcode.cn id=151 lang=golang
- *
  * [151] 翻转字符串里的单词
- *
- * https://leetcode-cn.com/problems/reverse-words-in-a-string/description/
- *
- * algorithms
- * Medium (33.56%)
- * Likes:    93
- * Dislikes: 0
- * Total Accepted:    24.6K
- * Total Submissions: 73.1K
- * Testcase Example:  '"the sky is blue"'
- *
- * 给定一个字符串，逐个翻转字符串中的每个单词。
- *
- *
- *
- * 示例 1：
- *
- * 输入: "the sky is blue"
- * 输出: "blue is sky the"
- *
- *
- * 示例 2：
- *
- * 输入: "  hello world!  "
- * 输出: "world! hello"
- * 解释: 输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。
- *
- *
- * 示例 3：
- *
- * 输入: "a good   example"
- * 输出: "example good a"
- * 解释: 如果两个单词间有多余的空格，将反转后单词间的空格减少到只含一个。
- *
- *
- *
- *
- * 说明：
- *
- *
- * 无空格字符构成一个单词。
- * 输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。
- * 如果两个单词间有多余的空格，将反转后单词间的空格减少到只含一个。
- *
- *
- *
- *
- * 进阶：
- *
- * 请选用 C 语言的用户尝试使用 O(1) 额外空间复杂度的原地解法。
- *
+
  */
 
 // @lc code=start
-func reverseWords(s string) string {
 
+//2020/3/15 像这种以某个符号作为滑动窗口进入第二层循环得题目，一般都要在末尾加上这个符号
+//如ip得题目要加上.或者:
+
+func reverseWords(s string) string {
+	//很聪明的办法,给原字符加一个空格
+	s = " " + s
+	ansString := ""
+	for i := len(s) - 1; i >= 0; {
+        //1.如果碰到了不是空格得字符（结尾有可能有很多空格）
+		if s[i] != ' ' {
+            var j int
+            //2.找到第一个空格
+			for j = i - 1; j >= 0; j-- {
+				if s[j] == ' ' {
+					ansString += s[j+1:i+1] + " "
+					break
+				}
+			}
+			i = j
+		} else {
+			i--
+		}
+	}
+
+	if ansString != "" {
+		return ansString[0 : len(ansString)-1]
+	}
+	return ansString
 }
 
 // @lc code=end

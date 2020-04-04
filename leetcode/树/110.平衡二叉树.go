@@ -20,6 +20,8 @@ import "math"
 const NOT_BALANCE_BINARY_TREE = -1
 
 //平衡二叉树:一个二叉树每个节点的左右两个子树的高度差的绝对值不超过1。
+
+//2020/3/15 应该弄一个全局变量这样才可以避免已经找到了非平衡二叉树，但是要把所有节点都遍历一遍
 func isBalanced(root *TreeNode) bool {
 	if judgeIsBalanceTree(root) == NOT_BALANCE_BINARY_TREE {
 		return false

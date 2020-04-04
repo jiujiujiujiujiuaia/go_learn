@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 /*
  * @lc app=leetcode.cn id=300 lang=golang
@@ -10,7 +13,36 @@ import "fmt"
 
 // @lc code=start
 
-//解法一：时间复杂度为o（n）的解法
+//面试真题，面试官不仅要求我输出最长的值，还要把这个子串输出出来，怎么做？
+//再加一个dp数组的去记录这个状态，表示0-i这个范围内最长的
+func advance(nums []int) string {
+	strDp := make([]string, len(nums)+1)
+	dp := make([]int, len(nums)+1)
+	for i := 1; i < len(dp); i++ {
+		dp[i] = 1
+	}
+
+	var maxNumber int = 0
+	var maxLongestString string = ""
+	for i := 1; i <= len(nums); i++ {
+		for j := 0; j < i; j++ {
+			if nums[i-1] > nums[j] {
+				if dp[i] < dp[j+1]+1 {
+					dp[i] = dp[j+1] + 1
+					strDp[i] = strDp[j+1] + strconv.Itoa(nums[i-1])
+				}
+			}
+		}
+		if dp[i] > maxNumber {
+			maxLongestString = strDp[i]
+			maxNumber = dp[i]
+		}
+	}
+	return maxLongestString
+}
+
+//解法一：时间复杂度为o（n^2）的解法
+//dp[i]状态表示为0-i的最长子序列的长度
 func lengthOfLIS1(nums []int) int {
 	dp := make([]int, len(nums)+1)
 	for i := 1; i < len(dp); i++ {
@@ -39,6 +71,11 @@ func lengthOfLIS1(nums []int) int {
 }
 
 //解法二 复杂度o(nlogn) 改变了状态的定义
+//这是一种贪心的思路，假设有两个长度一样的最长序列，我们肯定
+//想要增长的慢的序列，例如1，2，3 1，100 ，200 我们肯定选择前者
+//因此维护这样一个数组，他是递增的并且尾巴尽量的小
+//如果大于尾巴 直接插入
+//如果小于尾巴，则找到他在这个数组的位置
 func lengthOfLIS(nums []int) int {
 	if len(nums) == 0 {
 		return 0
@@ -56,6 +93,8 @@ func lengthOfLIS(nums []int) int {
 		}
 
 		l, r := 0, len(tails)-1
+
+		//这个插入的位置可以同35题
 		for r >= l {
 			mid := l + (r-l)/2
 			if nums[i-1] > tails[mid] {

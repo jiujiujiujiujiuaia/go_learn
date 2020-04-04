@@ -1,13 +1,13 @@
 package main
 
-func main() {
+//这个题意不是很好理解
+//这里的node是要删除的节点
+//一般的删除是从头节点开始，一个一个遍历删除
 
-}
-
-//这个题目虽然简单，但是和常见的删除节点有些不一样。
-//一般的删除节点是：a-b-c,a.next=b.next，这个题目是把c复制给b
-//当然也是因为这个题目有限制条件，不会给最后一个节点
+//题目的边界是1.删除的是否是尾节点2.链表长度多长
 func deleteNode(node *ListNode) {
+	//复制下一个节点的值
+	//然后删除下一个节点
 	node.Val = node.Next.Val
 	node.Next = node.Next.Next
 }

@@ -1,13 +1,6 @@
 package main
 
-import "fmt"
-
-func main() {
-	res := generateParenthesis(3)
-	for index, v := range res {
-		fmt.Println(index, v)
-	}
-}
+//2020/2/27
 
 //这道题有两个感悟
 //1.一开始对于这类，类似于要输出所有可能结果的题目，有点无从下手，后来发现都是类似于回溯+递归来完成。
@@ -17,7 +10,7 @@ func main() {
 //4.这里的剪枝操作就是，无论何时，优先放左括号，只要在右括号多于左括号时才放右括号。
 var res []string
 
-func generateParenthesis(n int) []string {
+func generateParenthesis1(n int) []string {
 	res = []string{}
 	recursive(n, n, "")
 	return res
@@ -39,4 +32,27 @@ func recursive(leftNum, rightNum int, str string) {
 		recursive(leftNum, rightNum-1, right)
 	}
 
+}
+
+//2020/2/27
+func generateParenthesis(n int) []string {
+	res = make([]string, 0)
+	helpGenerateParenthesis("", n, n)
+	return res
+}
+
+func helpGenerateParenthesis(str string, leftNum, rightNum int) {
+	if leftNum == 0 && rightNum == 0 {
+		res = append(res, str)
+		return
+	}
+
+	if leftNum != 0 {
+		helpGenerateParenthesis(str+"(", leftNum-1, rightNum)
+	}
+
+	if rightNum > leftNum {
+		helpGenerateParenthesis(str+")", leftNum, rightNum-1)
+	}
+	return
 }

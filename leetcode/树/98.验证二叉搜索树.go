@@ -92,6 +92,9 @@ func isValidBST(root *TreeNode) bool {
 //这道题是很经典的递归思想，只处理当前
 //放在这道题目来说，我这样考虑，我左边节点都ok，那么前一个节点不能大于我，然后再看右边节点
 //是否ok，如果都ok，那么返回true。最后对异常情况/递归终止情况讨论。
+
+//这个题目最关键的是pre这个值，先把pre=左节点，然后到根节点。
+//根节点必须大于左节点，然后pre=根节点，右节点必须要大于根节点然后就是pre=右节点
 func helpIsValidBST(root *TreeNode)bool{
 
 	if root == nil{

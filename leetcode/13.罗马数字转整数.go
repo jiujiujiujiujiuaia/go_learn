@@ -7,6 +7,9 @@ package main
  */
 
 // @lc code=start
+
+//厘清题意：罗马数字不允许连续的四个相同的字符，因此这个规则最大能表示的数是3999
+
 func romanToInt(s string) int {
 	numberMap := map[string]int{
 		"I": 1,
@@ -18,6 +21,9 @@ func romanToInt(s string) int {
 		"M": 1000,
 	}
 	res := 0
+
+	//很简单，如果current的next是大于current，那么说明这里是两位表示一位
+	//然后跳过这两位
 	for index := 0; index < len(s); index++ {
 		if next := index + 1; next < len(s) && numberMap[string(s[next])] >
 			numberMap[string(s[index])] {

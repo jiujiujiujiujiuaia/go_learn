@@ -8,8 +8,11 @@ package main
 
 // @lc code=start
 
+//2020/2/25
+
 //因为题目要求了本地移动，因此只能采取了O(cnt * n)的时间复杂度
 //思想就是把一个坑让出来，然后其他的数组数字就可以活动了。最后再把坑填上
+//暴力
 func rotate1(nums []int, k int) {
 	k = k % len(nums)
 	for i := 0; i < k; i++ {
@@ -35,6 +38,21 @@ func rotate(nums []int, k int) {
 
 //解法三，经观察发现尾部的k%n个元素会被挪到头部，剩下的元素向后移动
 //因此先全部反转，然后k%n个元素反转，后n-k%n进行反转（这个又是双指针法翻转数组的问题）
+func rotate3(nums []int, k int) {
+	k = k % len(nums)
+	helpReverseRotate(nums, 0, len(nums)-1)
+
+	helpReverseRotate(nums, 0, k-1)
+	helpReverseRotate(nums, k, len(nums)-1)
+}
+
+func helpReverseRotate(nums []int, start, end int) {
+	for start < end {
+		nums[start], nums[end] = nums[end], nums[start]
+		start++
+		end--
+	}
+}
 
 //解法四，依次遍历所有元素，找到元素的新位置，这样就会把老元素给挤掉，保存老元素。但是
 //有可能会出现新老元素出现同一位置上，因此还要判断环状数组的问题

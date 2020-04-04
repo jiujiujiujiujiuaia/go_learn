@@ -16,6 +16,4 @@ func detectCycle(head *ListNode) *ListNode {
 	return nil
 }
 
-func main() {
-
-}
+//解法二 也就是快慢指针去寻找，可以参考notability上和287题解法

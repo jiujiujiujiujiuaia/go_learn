@@ -36,3 +36,5 @@ func solve(nums []int) int {
 	}
 	return best
 }
+
+//还有一种分治的思路也可以解决这道题目

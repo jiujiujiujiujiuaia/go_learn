@@ -48,6 +48,8 @@ package main
  */
 
 // @lc code=start
+
+//2020/3/9
 func searchMatrix(matrix [][]int, target int) bool {
 
 	if len(matrix) == 0 {
@@ -64,6 +66,7 @@ func searchMatrix(matrix [][]int, target int) bool {
 	for l <= h {
 		mid := l + (h-l)/2
 		var ok bool
+		//3.这是重点，把二维当作一维来做
 		i, j := mid/col, mid%col
 		l, h, ok = help(matrix[i][j], target, mid, l, h)
 		if ok {
@@ -83,10 +86,5 @@ func help(number, target, mid, l, h int) (int, int, bool) {
 		return 0, 0, true
 	}
 }
-
-// func main() {
-// 	a := [][]int{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 50}}
-// 	searchMatrix(a, 13)
-// }
 
 // @lc code=end

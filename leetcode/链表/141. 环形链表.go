@@ -7,14 +7,15 @@ func hasCycle(head *ListNode) bool {
 	if head == nil || head.Next == nil {
 		return false
 	}
+	//这里初始化已经是两个节点走了一次，慢的走一步到head，快的走两步到达head.next
 	slow := head
 	fast := head.Next
-	for fast.Next != nil && fast.Next.Next != nil {
-		if fast == slow {
-			return true
+	for slow != fast {
+		if fast == nil || fast.Next == nil {
+			return false
 		}
 		fast = fast.Next.Next
 		slow = slow.Next
 	}
-	return false
+	return true
 }

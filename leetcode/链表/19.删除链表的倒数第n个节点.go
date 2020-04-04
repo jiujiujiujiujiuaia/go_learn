@@ -23,6 +23,8 @@ package main
 //		3.当判断条件是while node != nil 表示的是遍历整个链表
 //	      当判断条件是while node.Next != nil 表示的是遍历前n-1个结点
 
+//2020/3/10
+
 //解法一：暴力模拟版本
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	//1.三种情况，被删除的节点在头，尾，中间.
@@ -58,8 +60,8 @@ func removeNthFromEnd2(head *ListNode, n int) *ListNode {
 	dummyHead := new(ListNode)
 	dummyHead.Next = head
 
-	//1.引入快慢指针，由于倒数第几个节点是以末尾节点为锚
-	//快慢指针的间隔为n，当快指针到达末尾了，则慢指针距离快n
+	//1.引入双指针，由于倒数第几个节点是以末尾节点为锚
+	//双指针的间隔为n，当快指针到达末尾了，则慢指针距离快n
 	first, second := dummyHead, dummyHead
 
 	//2.距离+1，为了找到被删除节点前一个节点
