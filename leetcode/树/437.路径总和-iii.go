@@ -95,6 +95,8 @@ func help(root *TreeNode, sum int, res []int) {
 
 	//2.循环遍历之前的节点，判断是否可以组成一条等于sum的路径。
 	//无论是否等于0，都要进行更新
+
+	//3.1 由于这里新申请了空间，那么左右子树的更改不会互相影响
 	var current []int
 	for i := 0; i < len(res); i++ {
 		var result int

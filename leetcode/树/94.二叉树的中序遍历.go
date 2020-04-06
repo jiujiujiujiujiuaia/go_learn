@@ -1,5 +1,7 @@
 package main
 
+import "container/list"
+
 /*
  * @lc app=leetcode.cn id=94 lang=golang
  *
@@ -42,10 +44,36 @@ func solve(node *TreeNode) {
 	solve(node.Right)
 }
 
-//解法二：迭代解决
+//解法二：迭代解决，都是使用嵌套循环解决的，有点烧脑
+//这里参考一下评论中颜色标记法，把前中后序三种使用迭代思路串起来了。
+
 func inorderTraversal(root *TreeNode) []int {
-	result = make([]int, 0)
+	result := make([]int, 0)
+	white, grey := 1, 0
+	stack := list.New()
+	stack.PushFront(root)
+	stack.PushFront(white)
+	for stack.Len() != 0 {
+		color, node := stack.Front().Value.(int), stack.Front().Next().Value.(*TreeNode)
+		stack.Remove(stack.Front())
+		stack.Remove(stack.Front())
+	if node == nil {
+		continue
+	}
 	
+	if color == white {
+		stack.PushFront(node.Right)
+		stack.PushFront(white)
+		stack.PushFront(node)
+		stack.PushFront(grey)
+		stack.PushFront(node.Left)
+		stack.PushFront(white)
+	} else {
+		result = append(result, node.Val)
+	}
+	}
+	
+	return result
 }
 
 // @lc code=end
