@@ -40,7 +40,7 @@ func findDuplicate4(nums []int) int {
 	return -1
 }
 
-//解法三
+//解法三 只能用于解决1-n范围，如果0-n不能用这个方法，会有包含0的异常情况
 func findDuplicate(nums []int) int {
 	slow, fast := 0, 0
 	//1.预处理满指针走一格，快指针走两格

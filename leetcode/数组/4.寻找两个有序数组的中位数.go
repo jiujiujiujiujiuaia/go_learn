@@ -12,7 +12,7 @@ package main
 
 //解法一：把数组分成相等的两部分，并且要一直保持这个平衡
 //知道找到前部分最大的值小于后部分最小值的，否则继续保持这个平衡
-func findMedianSortedArrays1(nums1 []int, nums2 []int) float64 {
+func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	hanf := (len(nums1) + len(nums2)) / 2
 	isOdd := (len(nums1)+len(nums2))%2 != 0
 	//1.保证nums1是短数组，否则交换两个数组
@@ -27,6 +27,7 @@ func findMedianSortedArrays1(nums1 []int, nums2 []int) float64 {
 	//3.这里的i和j都是表示个数，i=0就是表示第一个数组0个
 	for i := 0; i < len(nums1)+1; i++ {
 		//4.假设总数是5-> 5/2=2 那么刚刚好表示的是3个数，即j是从数量上的第一个中位开始判断
+		//注意：这里j其实在移动
 		j = hanf - i
 
 		if i == 0 {
@@ -55,6 +56,7 @@ func findMedianSortedArrays1(nums1 []int, nums2 []int) float64 {
 			}
 		}
 	}
+	return 1
 }
 
 //解法二：解法一是对短的数组一个个的寻找，解法二的是在这个基础上
@@ -64,13 +66,14 @@ func findMedianSortedArrays1(nums1 []int, nums2 []int) float64 {
 	isOdd := (len(nums1)+len(nums2))%2 != 0
 	
 	if len(nums1) > len(nums2) {
-		return findMedianSortedArrays(nums2, nums1)
+		return findMedianSortedArrays1(nums2, nums1)
 	}
 
 	
 	var j,i int
 	frontPartMax, backendPartMin := 0, 0
 
+	//短数组索引
 	l,r := 0,len(nums1)
 	for l<=r {
 		i = l + (r - l) / 2
@@ -102,6 +105,7 @@ func findMedianSortedArrays1(nums1 []int, nums2 []int) float64 {
 			}
 		}
 	}
+	return 1.0
 }
 
 func max(a, b int) int {
