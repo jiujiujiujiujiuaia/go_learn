@@ -1,3 +1,7 @@
+package main
+
+import "fmt"
+
 /*
  * @lc app=leetcode.cn id=1 lang=golang
  *
@@ -5,8 +9,13 @@
  */
 
 // @lc code=start
-func twoSum(nums []int, target int) []int {
 
+func main() {
+	fmt.Println("1111")
 }
-// @lc code=end
 
+// func twoSum(nums []int, target int) []int {
+
+// }
+
+// @lc code=end
