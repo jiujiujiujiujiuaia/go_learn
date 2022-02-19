@@ -5,6 +5,32 @@
 
 保证每日一题的同时，记录学习golang的每一篇文章。
 
+# VScode+Golang+Leetcode环境搭建
+
+## 1.下载golang
+
+windows 平台选择 xxx网址下载
+linux平台选择 wget xx 命令下载
+
+先下载golang，然后下载10.32.2版本的nodejs，然后下载1.17.6的golang，然后安装vscode的go插件，然后就可以开始写代码了！
+
+## 2.配置vscode的golang环境
+### 2.1 下载go extension
+![](pic/go_extension.png)
+### 2.2 下载go tools
+ctrl+shift+p -> 输入go update
+![](pic/go_tools.png)
+
+勾选所有的tools
+![](pic/different_go_tools.png)
+
+科学上网后，结果如下图
+![](pic/go_tools_result.png)
+## 3.leetcode插件
+安装leetcode 插件
+![](pic/leetcode.png)
+
+安装nodejs环境。第一次抛了一个奇怪的错误，最后安装10.32.2版本可以解决。后来安装了16.13.2也可以，没办法复现问题后，之后就没有深究了。
 # golang 学习笔记
 
 ## 1命令源码文件和库源码文件
