@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/go_learn/util"
+	"go_learn/util"
 )
 
 //1.建议多使用切片,仅仅复制三个字段(指向底层数组的指针,长度,容量),就可以实现函数间的传递,并且可以修改
