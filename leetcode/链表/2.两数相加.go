@@ -11,15 +11,18 @@ type ListNode struct {
       Next *ListNode
 }
 
+//Label:[链表遍历][新增链表节点][dummy节点使用]
+//Corner Cases:
 //这是一道经典的链表题，[链表遍历][新增链表节点][dummy节点使用]
 //链表题的难点在于遍历链表的时候的条件
-//当条件是currentNode != nil, 意味着所有节点都会被遍历到
-//当条件是currentNode.Next !=nil,意味着最后一个节点不会遍历到，
+//当循环条件是currentNode != nil, 意味着所有节点都会被遍历到
+//当循环条件是currentNode.Next !=nil,意味着最后一个节点不会遍历到，最后一个lastNode.next == nil
 //只能通过currentNode.Next.Val访问
 
 // @lc code=start
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	headNode := new(ListNode)
+	//1.复制指针
 	dummyNode := headNode
 	dummyNodeL1 := l1
 	dummyNodeL2 := l2
