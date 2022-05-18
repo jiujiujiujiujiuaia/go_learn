@@ -5,10 +5,6 @@ package main
  *
  * [19] 删除链表的倒数第N个节点
  */
- type ListNode struct {
-	Val  int
-	Next *ListNode
-}
 
 // @lc code=start
 //拿到这个题后，可以沟通（1）n会大于链表的长度吗
@@ -31,20 +27,19 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	headNodeCopy := head
 	dummyHead.Next = head
 	length := 0
-	for headNodeCopy != nil{
+	for headNodeCopy != nil {
 		length++
 		headNodeCopy = headNodeCopy.Next
 	}
 
 	count := length - n
 	headNodeCopy = dummyHead
-	for i:=0;i<count;i++{
+	for i := 0; i < count; i++ {
 		headNodeCopy = headNodeCopy.Next
 	}
 	headNodeCopy.Next = headNodeCopy.Next.Next
 	return dummyHead.Next
 }
-
 
 //2020/3/10
 //解法一：暴力模拟版本

@@ -5,12 +5,6 @@ package main
  *
  * [2] 两数相加
  */
-
-type ListNode struct {
-      Val int
-      Next *ListNode
-}
-
 //Label:[链表遍历][新增链表节点][dummy节点使用]
 //Corner Cases:
 //这是一道经典的链表题，[链表遍历][新增链表节点][dummy节点使用]
@@ -27,13 +21,13 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	dummyNodeL1 := l1
 	dummyNodeL2 := l2
 	carryOne := 0
-	for (dummyNodeL1 != nil && dummyNodeL2 != nil){
+	for dummyNodeL1 != nil && dummyNodeL2 != nil {
 		dummyNode.Val = (dummyNodeL1.Val + dummyNodeL2.Val + carryOne) % 10
 		carryOne = (dummyNodeL1.Val + dummyNodeL2.Val + carryOne) / 10
 
-		if(dummyNodeL1.Next == nil || dummyNodeL2.Next == nil){
+		if dummyNodeL1.Next == nil || dummyNodeL2.Next == nil {
 			break
-		}else{
+		} else {
 			nextNode := new(ListNode)
 			dummyNode.Next = nextNode
 			dummyNode = nextNode
@@ -42,25 +36,25 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		dummyNodeL2 = dummyNodeL2.Next
 	}
 
-	for (dummyNodeL1.Next != nil){
+	for dummyNodeL1.Next != nil {
 		nextNode := new(ListNode)
-		nextNode.Val = (dummyNodeL1.Next.Val + carryOne) % 10 
+		nextNode.Val = (dummyNodeL1.Next.Val + carryOne) % 10
 		carryOne = (dummyNodeL1.Next.Val + carryOne) / 10
 		dummyNode.Next = nextNode
 		dummyNode = nextNode
 		dummyNodeL1 = dummyNodeL1.Next
 	}
 
-	for (dummyNodeL2.Next != nil){
+	for dummyNodeL2.Next != nil {
 		nextNode := new(ListNode)
-		nextNode.Val = (dummyNodeL2.Next.Val + carryOne) % 10 
+		nextNode.Val = (dummyNodeL2.Next.Val + carryOne) % 10
 		carryOne = (dummyNodeL2.Next.Val + carryOne) / 10
 		dummyNode.Next = nextNode
 		dummyNode = nextNode
 		dummyNodeL2 = dummyNodeL2.Next
 	}
 
-	if (carryOne != 0){
+	if carryOne != 0 {
 		nextNode := new(ListNode)
 		nextNode.Val = carryOne
 		dummyNode.Next = nextNode
@@ -68,5 +62,5 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	return headNode
 }
-// @lc code=end
 
+// @lc code=end
