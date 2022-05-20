@@ -1,5 +1,11 @@
 package main
 
+import (
+	"go_learn/leetcode/util"
+)
+
+type ListNode = util.ListNode
+
 /*
  * @lc app=leetcode.cn id=19 lang=golang
  *
@@ -23,6 +29,10 @@ package main
 //(1)dummyNode是哑节点，不应该参与到循环遍历中去
 //(2)headNodeCopy遍历完链表一整遍，如果还想遍历一遍，应该是headNodeCopy=dummyNode而不是用next进行连接
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
+	if n <= 0 {
+		return head
+	}
+
 	dummyHead := new(ListNode)
 	headNodeCopy := head
 	dummyHead.Next = head
@@ -33,6 +43,10 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	}
 
 	count := length - n
+	if count < 0 {
+		return head
+	}
+
 	headNodeCopy = dummyHead
 	for i := 0; i < count; i++ {
 		headNodeCopy = headNodeCopy.Next

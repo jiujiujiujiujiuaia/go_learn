@@ -10,9 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a438997f-f4bb-4829-8405-e240722d521e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/leetcode/链表/19.remove-nth-node-from-end-of-list_testing.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/链表/19.remove-nth-node-from-end-of-list.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/链表/19.remove-nth-node-from-end-of-list.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/链表/2.两数相加.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/链表/2.两数相加.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/linkedList/19.remove-nth-node-from-end-of-list_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/util/LinkedList.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/util/LinkedList_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/util/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/util/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/141. 环形链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/141. 环形链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/142. 环形链表 II.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/142. 环形链表 II.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/147.对链表进行插入排序.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/147.对链表进行插入排序.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/148.排序链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/148.排序链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/160.相交链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/160.相交链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/19.remove-nth-node-from-end-of-list.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/19.remove-nth-node-from-end-of-list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/19.remove-nth-node-from-end-of-list_testing.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/2.两数相加.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/2.两数相加.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/203.移除链表元素.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/203.移除链表元素.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/206. 反转链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/206. 反转链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/21.合并两个有序链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/21.合并两个有序链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/23.合并k个排序链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/23.合并k个排序链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/234. 回文链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/234. 回文链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/237. 删除链表中的节点.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/237. 删除链表中的节点.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/24.两两交换链表中的节点.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/24.两两交换链表中的节点.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/25.k-个一组翻转链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/25.k-个一组翻转链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/61.旋转链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/61.旋转链表.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/82.删除排序链表中的重复元素-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/82.删除排序链表中的重复元素-ii.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/83.删除排序链表中的重复元素.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/83.删除排序链表中的重复元素.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/92.反转链表-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/92.反转链表-ii.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/链表/util.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,10 +248,16 @@
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
     "last_opened_file_path": "C:/Users/A/Desktop/workspace/go_learn",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "go.vgo"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\goSourceCode\src\go_learn\bingo的一些测试\demo_pb\pb" />
+      <recent name="C:\goSourceCode\src\go_learn\bingo的一些测试\demo_pb" />
+      <recent name="C:\goSourceCode\src\go_learn\抓包" />
+      <recent name="C:\goSourceCode\src\go_learn\pic" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\goSourceCode\src\go_learn\leetcode\双指针" />
       <recent name="C:\goSourceCode\src\go_learn\leetcode\贪心" />
@@ -236,50 +265,8 @@
       <recent name="C:\goSourceCode\src\go_learn\leetcode\链表" />
       <recent name="C:\goSourceCode\src\go_learn\leetcode\数据结构\栈" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\goSourceCode\src\go_learn\bingo的一些测试\demo_pb\pb" />
-      <recent name="C:\goSourceCode\src\go_learn\bingo的一些测试\demo_pb" />
-      <recent name="C:\goSourceCode\src\go_learn\抓包" />
-      <recent name="C:\goSourceCode\src\go_learn\pic" />
-    </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build 238. 除自身以外数组的乘积.go">
-    <configuration name="go build 221. 最大正方形.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <package value="go_learn" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/leetcode/动态规划/221. 最大正方形.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build 238. 除自身以外数组的乘积.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <package value="go_learn" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/leetcode/数组/238. 除自身以外数组的乘积.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build 7. 整数反转.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <package value="go_learn" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/leetcode/7. 整数反转.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build 88. 合并两个有序数组.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <package value="go_learn" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/leetcode/数组/88. 合并两个有序数组.go" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.TestRemoveNthFromEnd in go_learn/leetcode/linkedList">
     <configuration name="go build client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="learn_go_demo" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -290,30 +277,81 @@
       <filePath value="$PROJECT_DIR$/../../../../../goSourceCode/src/go_learn/并发/client/client.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCompareTwoLinkedList in go_learn/leetcode/util" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <package value="go_learn" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/bingo的一些测试/main.go" />
+      <working_directory value="$PROJECT_DIR$/leetcode/util" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_learn/leetcode/util" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCompareTwoLinkedList\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCompareTwoLinkedList/Compare_two_linked_lists_of_different_value_with_same_length in go_learn/leetcode/util" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_demo" />
+      <working_directory value="$PROJECT_DIR$/leetcode/util" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_learn/leetcode/util" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCompareTwoLinkedList\E$/^\QCompare_two_linked_lists_of_different_value_with_same_length\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCompareTwoLinkedList/Compare_two_same_linked_list in go_learn/leetcode/util" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_demo" />
+      <working_directory value="$PROJECT_DIR$/leetcode/util" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_learn/leetcode/util" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCompareTwoLinkedList\E$/^\QCompare_two_same_linked_list\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRemoveNthFromEnd in go_learn/leetcode/链表" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_demo" />
+      <working_directory value="$PROJECT_DIR$/leetcode/链表" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_learn/leetcode/链表" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestRemoveNthFromEnd\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRemoveNthFromEnd in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_demo" />
+      <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_learn/leetcode/linkedList" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestRemoveNthFromEnd\E$" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Go Build.go build client.go" />
-      <item itemvalue="Go Build.go build 221. 最大正方形.go" />
-      <item itemvalue="Go Build.go build 88. 合并两个有序数组.go" />
-      <item itemvalue="Go Build.go build 7. 整数反转.go" />
-      <item itemvalue="Go Build.go build main.go" />
-      <item itemvalue="Go Build.go build 238. 除自身以外数组的乘积.go" />
+      <item itemvalue="Go Test.TestCompareTwoLinkedList in go_learn/leetcode/util" />
+      <item itemvalue="Go Test.TestCompareTwoLinkedList/Compare_two_linked_lists_of_different_value_with_same_length in go_learn/leetcode/util" />
+      <item itemvalue="Go Test.TestCompareTwoLinkedList/Compare_two_same_linked_list in go_learn/leetcode/util" />
+      <item itemvalue="Go Test.TestRemoveNthFromEnd in go_learn/leetcode/linkedList" />
+      <item itemvalue="Go Test.TestRemoveNthFromEnd in go_learn/leetcode/链表" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build 238. 除自身以外数组的乘积.go" />
-        <item itemvalue="Go Build.go build 7. 整数反转.go" />
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build 88. 合并两个有序数组.go" />
-        <item itemvalue="Go Build.go build 221. 最大正方形.go" />
+        <item itemvalue="Go Test.TestRemoveNthFromEnd in go_learn/leetcode/linkedList" />
+        <item itemvalue="Go Test.TestCompareTwoLinkedList in go_learn/leetcode/util" />
+        <item itemvalue="Go Test.TestRemoveNthFromEnd in go_learn/leetcode/链表" />
+        <item itemvalue="Go Test.TestCompareTwoLinkedList/Compare_two_linked_lists_of_different_value_with_same_length in go_learn/leetcode/util" />
+        <item itemvalue="Go Test.TestCompareTwoLinkedList/Compare_two_same_linked_list in go_learn/leetcode/util" />
       </list>
     </recent_temporary>
   </component>
@@ -366,7 +404,6 @@
     </option>
   </component>
   <component name="VgoProject">
-    <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
   </component>
   <component name="XDebuggerManager">
@@ -381,6 +418,21 @@
           <url>file://$PROJECT_DIR$/../github.com/google/gopacket/packet.go</url>
           <line>256</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcode/util/LinkedList_test.go</url>
+          <line>51</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcode/util/LinkedList_test.go</url>
+          <line>52</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/leetcode/util/LinkedList.go</url>
+          <line>30</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
