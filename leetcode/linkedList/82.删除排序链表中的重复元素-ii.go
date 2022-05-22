@@ -1,4 +1,4 @@
-package main
+package linkedlist
 
 /*
  * @lc app=leetcode.cn id=82 lang=golang

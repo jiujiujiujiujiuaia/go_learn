@@ -1,4 +1,4 @@
-package main
+package linkedlist
 
 import "fmt"
 
@@ -17,7 +17,7 @@ import "fmt"
  * }
  */
 func rotateRight(head *ListNode, k int) *ListNode {
-	if head == nil{
+	if head == nil {
 		return nil
 	}
 
@@ -35,14 +35,14 @@ func rotateRight(head *ListNode, k int) *ListNode {
 	//2. 移动可能会出现大于length的情况
 	k = k % length
 
-	fast,slow := dummyHead,dummyHead
+	fast, slow := dummyHead, dummyHead
 	//距离+1 slow节点找到的就是倒数第k+1个节点
 	//再多说一句，由于已经知道了长度，可以不用这么麻烦的去找到那个节点
-	for i:=0;i<=k;i++{
+	for i := 0; i <= k; i++ {
 		fast = fast.Next
 	}
 
-	for fast != nil{
+	for fast != nil {
 		slow = slow.Next
 		fast = fast.Next
 	}

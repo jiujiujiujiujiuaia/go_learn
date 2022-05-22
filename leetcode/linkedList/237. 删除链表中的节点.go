@@ -1,4 +1,4 @@
-package main
+package linkedlist
 
 //这个题意不是很好理解
 //这里的node是要删除的节点

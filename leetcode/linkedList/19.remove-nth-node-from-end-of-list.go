@@ -1,4 +1,4 @@
-package main
+package linkedlist
 
 import (
 	"go_learn/leetcode/util"

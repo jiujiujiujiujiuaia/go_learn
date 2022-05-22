@@ -1,4 +1,4 @@
-package main
+package linkedlist
 
 /*
  * @lc app=leetcode.cn id=2 lang=golang
@@ -6,7 +6,6 @@ package main
  * [2] 两数相加
  */
 //Label:[链表遍历][新增链表节点][dummy节点使用]
-//Corner Cases:
 //这是一道经典的链表题，[链表遍历][新增链表节点][dummy节点使用]
 //链表题的难点在于遍历链表的时候的条件
 //当循环条件是currentNode != nil, 意味着所有节点都会被遍历到

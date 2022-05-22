@@ -1,7 +1,9 @@
-package main
+package linkedlist
 
-import "testing"
-import "go_learn/leetcode/util"
+import (
+	"go_learn/leetcode/util"
+	"testing"
+)
 
 func TestRemoveNthFromEnd(t *testing.T) {
 	cases := []struct {
