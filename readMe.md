@@ -6,41 +6,14 @@
 
 保证每日一题的同时，记录学习golang的每一篇文章。
 
-# VScode+Golang+Leetcode环境搭建
-
-## 1.下载golang
-
-windows 平台选择 xxx网址下载
-linux平台选择 wget xx 命令下载
-
-先下载golang，然后下载10.32.2版本的nodejs，然后下载1.17.6的golang，然后安装vscode的go插件，然后就可以开始写代码了！
-
-## 2.配置vscode的golang环境
-### 2.1 下载go extension
-![](pic/go_extension.png)
-### 2.2 下载go tools
-ctrl+shift+p -> 输入go update
-![](pic/go_tools.png)
-
-勾选所有的tools
-![](pic/different_go_tools.png)
-
-科学上网后，结果如下图
-![](pic/go_tools_result.png)
-## 3.leetcode插件
-安装leetcode 插件
-![](pic/leetcode.png)
-
-安装nodeJs之后，Vscode的OUTPUT会抛出一个奇怪的错误，什么toString is underfined(没有截图)，但是其实已经登录成功了，
-仔细看，是说拿user profile的时候抛出的，不影响使用。
 
 # Leetcode 刷题规范
 
 - 0.拿到题目，先在注释中写出来，应该问哪些问题，和面试官交流哪些东西？（假设题目给的是模糊的）
-- 1.要先思考一些corner cases,最后以单元测试的形式沉淀下来
+- 1.要先思考一些corner cases,最后以单元测试的形式沉淀下来,并且可以先写单元测试
 - 2.给每一道题，打上label
 - 3.是否需要加一些断言，使得程序健壮性更好？
-- 4.要学会反思，code clean/性能优化/注释/变量命名更加规范
+- 4.要学会反思，code clean/性能优化/注释/变量命名/函数复用更加规范
 
 
 # golang 学习笔记
