@@ -17,6 +17,35 @@ package linkedlist
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	newHeadNode := new(ListNode)
 	dummyNode := newHeadNode
+	for l1 != nil && l2 != nil {
+		if l1.Val > l2.Val {
+			node := new(ListNode)
+			node.Val = l2.Val
+			newHeadNode.Next = node
+			l2 = l2.Next
+		} else {
+			node := new(ListNode)
+			node.Val = l1.Val
+			newHeadNode.Next = node
+			l1 = l1.Next
+		}
+		newHeadNode = newHeadNode.Next
+	}
+
+	if l1 != nil {
+		newHeadNode.Next = l1
+	}
+
+	if l2 != nil {
+		newHeadNode.Next = l2
+	}
+
+	return dummyNode.Next
+}
+
+func mergeTwoLists1(l1 *ListNode, l2 *ListNode) *ListNode {
+	newHeadNode := new(ListNode)
+	dummyNode := newHeadNode
 	for l1 != nil || l2 != nil {
 		if l1 == nil {
 			newHeadNode.Next = l2
