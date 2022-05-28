@@ -11,9 +11,9 @@ func Test_mergeTwoLists(t *testing.T) {
 		input1, input2 []int
 		expected       []int
 	}{
-		{"normal cases", []int{1, 2, 3}, []int{1, 2, 3}, []int{1, 1, 2, 2, 3, 3}},
-		{"normal cases", []int{1, 2, 3, 4}, []int{1, 2, 3}, []int{1, 1, 2, 2, 3, 3, 4}},
-		{"normal cases", []int{1, 2, 3}, []int{1, 2, 3, 4}, []int{1, 1, 2, 2, 3, 3, 4}},
+		{"normal cases with same length", []int{1, 2, 3}, []int{1, 2, 3}, []int{1, 1, 2, 2, 3, 3}},
+		{"normal cases with different length", []int{1, 2, 3, 4}, []int{1, 2, 3}, []int{1, 1, 2, 2, 3, 3, 4}},
+		{"normal cases with different length", []int{1, 2, 3}, []int{1, 2, 3, 4}, []int{1, 1, 2, 2, 3, 3, 4}},
 		{"nil node", []int{}, []int{1, 2, 3, 4}, []int{1, 2, 3, 4}},
 		{"nil node", []int{}, []int{}, []int{}},
 	}
