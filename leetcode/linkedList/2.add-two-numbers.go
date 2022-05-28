@@ -13,6 +13,7 @@ package linkedlist
 //只能通过currentNode.Next.Val访问
 
 // @lc code=start
+//leetcode submit region begin(Prohibit modification and deletion)
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	headNode := new(ListNode)
 	//1.复制指针
@@ -62,4 +63,5 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	return headNode
 }
 
+//leetcode submit region end(Prohibit modification and deletion)
 // @lc code=end
