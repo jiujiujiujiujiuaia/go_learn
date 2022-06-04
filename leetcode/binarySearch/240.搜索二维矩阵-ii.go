@@ -1,4 +1,4 @@
-package main
+package binarySearch
 
 /*
  * @lc app=leetcode.cn id=240 lang=golang

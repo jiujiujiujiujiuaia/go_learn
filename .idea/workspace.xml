@@ -10,17 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a438997f-f4bb-4829-8405-e240722d521e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tips.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/document/golangTips.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pic/debug.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/binarySearch/binary-search.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/2.add-two-numbers.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/2.add-two-numbers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pic/Environment.md" beforeDir="false" afterPath="$PROJECT_DIR$/Environment.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/23.合并k个排序链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/23.merge-k-sorted-lists.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/153.寻找旋转排序数组中的最小值.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/153.寻找旋转排序数组中的最小值.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/154.寻找旋转排序数组中的最小值-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/154.寻找旋转排序数组中的最小值-ii.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/240.搜索二维矩阵-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/240.搜索二维矩阵-ii.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/33.搜索旋转排序数组.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/33.搜索旋转排序数组.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/34.在排序数组中查找元素的第一个和最后一个位置.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/34.在排序数组中查找元素的第一个和最后一个位置.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/35.搜索插入位置.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/35.搜索插入位置.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/69.x-的平方根.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/69.x-的平方根.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/74.搜索二维矩阵.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/74.搜索二维矩阵.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/81.搜索旋转排序数组-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/81.搜索旋转排序数组-ii.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +102,15 @@
         <option value="file://$PROJECT_DIR$/../.." />
       </list>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/19.remove-nth-node-from-end-of-list.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/19.remove-nth-node-from-end-of-list_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/2.add-two-numbers.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/2.add-two-numbers_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/21.merge-two-sorted-lists.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/21.merge-two-sorted-lists_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/23.merge-k-sorted-lists.go" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -227,24 +238,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "configurable..is.expanded": "false",
-    "configurable.GoLibrariesConfigurable.is.expanded": "true",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/Users/A/Downloads/leetcode-editor-8.1.zip",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "leetcode.id"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
+    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/A/Desktop/workspace/keda&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;leetcode.id&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\goSourceCode\src\go_learn\bingo的一些测试\demo_pb\pb" />
@@ -260,7 +271,7 @@
       <recent name="C:\goSourceCode\src\go_learn\leetcode\动态规划" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.Test_addTwoNumbers/Normal_cases_without_carry_one in go_learn/leetcode/linkedList">
+  <component name="RunManager" selected="Go Test.Test_addTwoNumbers in go_learn/leetcode/linkedList (1)">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="learn_go_demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -280,7 +291,7 @@
       <filePath value="$PROJECT_DIR$/../../../../../goSourceCode/src/go_learn/并发/client/client.go" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_addTwoNumbers in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_addTwoNumbers in go_learn/leetcode/linkedList (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
       <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
       <root_directory value="$PROJECT_DIR$" />
@@ -292,7 +303,7 @@
       <pattern value="^\QTest_addTwoNumbers\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_addTwoNumbers/Carry_more_than_one_bit#02 in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_addTwoNumbers/Carry_more_than_one_bit_but_not_change_the_length in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
       <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
       <root_directory value="$PROJECT_DIR$" />
@@ -301,7 +312,7 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_addTwoNumbers\E$/^\QCarry_more_than_one_bit#02\E$" />
+      <pattern value="^\QTest_addTwoNumbers\E$/^\QCarry_more_than_one_bit_but_not_change_the_length\E$" />
       <method v="2" />
     </configuration>
     <configuration name="Test_addTwoNumbers/Normal_cases_without_carry_one in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -316,7 +327,7 @@
       <pattern value="^\QTest_addTwoNumbers\E$/^\QNormal_cases_without_carry_one\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_addTwoNumbers/Zero_as_input in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_mergeTwoLists in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
       <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
       <root_directory value="$PROJECT_DIR$" />
@@ -325,10 +336,10 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_addTwoNumbers\E$/^\QZero_as_input\E$" />
+      <pattern value="^\QTest_mergeTwoLists\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_addTwoNumbers/Zero_as_input#01 in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_mergeTwoLists/Delete_the_last_one in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
       <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
       <root_directory value="$PROJECT_DIR$" />
@@ -337,7 +348,7 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_addTwoNumbers\E$/^\QZero_as_input#01\E$" />
+      <pattern value="^\QTest_mergeTwoLists\E$/^\QDelete_the_last_one\E$" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -352,19 +363,19 @@
     </configuration>
     <list>
       <item itemvalue="Go Build.go build client.go" />
+      <item itemvalue="Go Test.Test_addTwoNumbers in go_learn/leetcode/linkedList (1)" />
+      <item itemvalue="Go Test.Test_addTwoNumbers/Carry_more_than_one_bit_but_not_change_the_length in go_learn/leetcode/linkedList" />
       <item itemvalue="Go Test.Test_addTwoNumbers/Normal_cases_without_carry_one in go_learn/leetcode/linkedList" />
-      <item itemvalue="Go Test.Test_addTwoNumbers in go_learn/leetcode/linkedList" />
-      <item itemvalue="Go Test.Test_addTwoNumbers/Carry_more_than_one_bit#02 in go_learn/leetcode/linkedList" />
-      <item itemvalue="Go Test.Test_addTwoNumbers/Zero_as_input in go_learn/leetcode/linkedList" />
-      <item itemvalue="Go Test.Test_addTwoNumbers/Zero_as_input#01 in go_learn/leetcode/linkedList" />
+      <item itemvalue="Go Test.Test_mergeTwoLists in go_learn/leetcode/linkedList" />
+      <item itemvalue="Go Test.Test_mergeTwoLists/Delete_the_last_one in go_learn/leetcode/linkedList" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.Test_addTwoNumbers in go_learn/leetcode/linkedList (1)" />
+        <item itemvalue="Go Test.Test_addTwoNumbers/Carry_more_than_one_bit_but_not_change_the_length in go_learn/leetcode/linkedList" />
         <item itemvalue="Go Test.Test_addTwoNumbers/Normal_cases_without_carry_one in go_learn/leetcode/linkedList" />
-        <item itemvalue="Go Test.Test_addTwoNumbers in go_learn/leetcode/linkedList" />
-        <item itemvalue="Go Test.Test_addTwoNumbers/Zero_as_input#01 in go_learn/leetcode/linkedList" />
-        <item itemvalue="Go Test.Test_addTwoNumbers/Zero_as_input in go_learn/leetcode/linkedList" />
-        <item itemvalue="Go Test.Test_addTwoNumbers/Carry_more_than_one_bit#02 in go_learn/leetcode/linkedList" />
+        <item itemvalue="Go Test.Test_mergeTwoLists in go_learn/leetcode/linkedList" />
+        <item itemvalue="Go Test.Test_mergeTwoLists/Delete_the_last_one in go_learn/leetcode/linkedList" />
       </list>
     </recent_temporary>
   </component>
@@ -449,6 +460,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GoTestRunConfiguration">
+        <watch expression="*(*&quot;go_learn/leetcode/util.ListNode&quot;)(824634066544)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/反射/反射.go">
