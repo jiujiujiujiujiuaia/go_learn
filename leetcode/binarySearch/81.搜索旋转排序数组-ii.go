@@ -12,7 +12,7 @@ package binarySearch
 //（1）第一种情况就退化到了o(n) （2）第二种情况是原地旋转 （3）第三种是无法区分哪段有序
 //（4）
 
-func search(nums []int, target int) bool {
+func search3(nums []int, target int) bool {
 	if len(nums) == 0 {
 		return false
 	}

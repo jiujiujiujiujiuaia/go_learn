@@ -10,15 +10,22 @@ go env -w GO111MODULE=on
 # Goland环境
 ## 1.下载Goland
 ### goland 设置
-#### 设置
+#### (1)设置
 ![img.png](pic/setting_bar.png)
 
-#### 字体
+#### (2)字体
 ![img_1.png](pic/front_size.png)
 
-#### Enable Go Module
+#### (3)Enable Go Module
 ![img_2.png](pic/enable_go_module.png)
 
+#### (4)快捷回退和跳转代码
+![](pic/navigate_to_code.png)
+
+#### (5)全局搜索
+![](pic/Find.png)
+
+#### 
 ## 2.Goland + Vscode plugin
 ### 下载plugin到本地
 https://plugins.jetbrains.com/plugin/12132-leetcode-editor

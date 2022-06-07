@@ -10,19 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a438997f-f4bb-4829-8405-e240722d521e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/leetcode/binarySearch/binary-search.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/binarySearch/BinartSearch.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/23.合并k个排序链表.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/linkedList/23.merge-k-sorted-lists.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/153.寻找旋转排序数组中的最小值.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/153.寻找旋转排序数组中的最小值.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/154.寻找旋转排序数组中的最小值-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/154.寻找旋转排序数组中的最小值-ii.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/240.搜索二维矩阵-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/240.搜索二维矩阵-ii.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/33.搜索旋转排序数组.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/33.搜索旋转排序数组.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/34.在排序数组中查找元素的第一个和最后一个位置.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/34.在排序数组中查找元素的第一个和最后一个位置.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/35.搜索插入位置.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/35.搜索插入位置.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/69.x-的平方根.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/69.x-的平方根.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/74.搜索二维矩阵.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/74.搜索二维矩阵.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索/81.搜索旋转排序数组-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/81.搜索旋转排序数组-ii.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Environment.md" beforeDir="false" afterPath="$PROJECT_DIR$/Environment.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tips.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/154.寻找旋转排序数组中的最小值-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/154.寻找旋转排序数组中的最小值-ii.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/33.搜索旋转排序数组.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/33.搜索旋转排序数组.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/34.在排序数组中查找元素的第一个和最后一个位置.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/34.在排序数组中查找元素的第一个和最后一个位置.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/74.搜索二维矩阵.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/74.搜索二维矩阵.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/81.搜索旋转排序数组-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/81.搜索旋转排序数组-ii.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/binary-search.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二分搜索.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,11 +262,11 @@
       <recent name="C:\goSourceCode\src\go_learn\pic" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\A\Desktop\workspace\go_learn\leetcode\binarySearch" />
       <recent name="C:\Users\A\Desktop\workspace\go_learn\pic" />
       <recent name="C:\Users\A\Desktop\workspace\go_learn" />
       <recent name="C:\goSourceCode\src\go_learn\leetcode\双指针" />
       <recent name="C:\goSourceCode\src\go_learn\leetcode\贪心" />
-      <recent name="C:\goSourceCode\src\go_learn\leetcode\动态规划" />
     </key>
   </component>
   <component name="RunManager" selected="Go Test.Test_addTwoNumbers in go_learn/leetcode/linkedList (1)">

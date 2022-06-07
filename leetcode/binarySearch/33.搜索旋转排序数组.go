@@ -83,7 +83,7 @@ func findMax(nums []int) int {
 }
 
 //解法二：不拐弯，直接二分
-func search(nums []int, target int) int {
+func search2(nums []int, target int) int {
 	if len(nums) == 0 {
 		return -1
 	}

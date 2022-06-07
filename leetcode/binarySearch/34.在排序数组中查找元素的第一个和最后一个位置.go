@@ -59,16 +59,16 @@ func searchLeftBound(nums []int, target int) int {
 	left, right := 0, len(nums)-1 //1.这里表示的搜索区间为[l,r]双闭区间
 	for left <= right {
 		mid := left + (right-left)/2
-		//2.因此每一次搜索完后，区间都要是双闭[left,mid-1],[mid+1,right]
 		if nums[mid] > target {
 			right = mid - 1
 		} else if nums[mid] < target {
 			left = mid + 1
 		} else if nums[mid] == target {
-			//3.当搜索到这个值后，不是着急把他返回，而是缩小右区间
-			//因此循环终止条件是left = right + 1 = mid - 1 + 1
-			//如果数组中只有一个目标值的话，left还是能==mid
-			//如果数组中有2个或以上目标值，那么left就会第一个值
+			//3.和传统的二分搜索不同的是，当搜索到target的时候，没有停止搜索，而是缩小右区间。那么就会有以下集中可能:
+			//3.1 如果数组只有一个target, 然后l和r就会在target的左边一直搜索，r=targetIndex-1不变，l不断的向r靠拢，直到l=r=targetIndex-1
+			//那么最后一次肯定进nums[mid] < target这个条件，最后一次循环为mid=l=r，且target>nums[mid]，因此l=r+1,而r=targetIndex -1, l = targetIndex
+			//3.2 如果数组有多个target,只要不是最左边的target,循环都不会停下来，不断的缩小右边界缩小范围寻找target，直到命中最后也是最左边的的target, 然后就退化到3.1的case
+			//l=targetIndex
 			right = mid - 1
 		}
 	}
