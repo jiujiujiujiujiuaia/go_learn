@@ -8,8 +8,36 @@ package binarySearch
 
 // @lc code=start
 
-//2020/3/10
+//2022/7/4
+//这道题属于半有序，在basis基础上进行了修改。把一个有序数组通过循环的方式，变成了两段有序。
+//比如{[5,6,7,8,9,10],[1,2,3,4]} 无论任意时刻，mid要么掉入上半有序区间，要么掉入下半有序区间。
+//假设掉入上半有序区间（反之亦然），那么如果target在[l,mid)范围内，那就退化成二分搜索。
+//如果不在范围内，那就放弃[l,mid) 就是[mid+1,r]范围，这个范围内，又会分为上半有序区间和下半有序区间。
+func search(nums []int, target int) int {
+	leftBoundary := 0
+	rightBoundary := len(nums) - 1
+	for leftBoundary <= rightBoundary {
+		mid := leftBoundary + (rightBoundary-leftBoundary)/2
+		if nums[mid] == target {
+			return mid
+		} else if nums[mid] >= nums[leftBoundary] {
+			if target < nums[mid] && target >= nums[leftBoundary] {
+				rightBoundary = mid - 1
+			} else {
+				leftBoundary = mid + 1
+			}
+		} else if nums[mid] < nums[rightBoundary] {
+			if target > nums[mid] && target <= nums[rightBoundary] {
+				leftBoundary = mid + 1
+			} else {
+				rightBoundary = mid - 1
+			}
+		}
+	}
+	return -1
+}
 
+//2020/3/10
 //解法一：
 //先找到整个有序数组旋转了多少，也就是向右移动了多少
 //然后把数组当作是有序的，套用二分搜索的标准模板，只不过mid也要偏移，

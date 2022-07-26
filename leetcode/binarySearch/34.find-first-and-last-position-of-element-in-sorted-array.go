@@ -7,10 +7,74 @@ package binarySearch
 
  */
 
-//2020/3/10
-
 // @lc code=start
 
+//2022/7/26
+//这道题属于全有序
+func searchRange(nums []int, target int) []int {
+
+	if len(nums) == 0 {
+		return []int{-1, -1}
+	}
+	//优化点，这样提前判断，不需要进入循环了
+	if target > nums[len(nums)-1] || target < nums[0] {
+		return []int{-1, -1}
+	}
+
+	rightIndex := searchRightBoundary(nums, target)
+	leftIndex := searchLeftBoundary(nums, target)
+	return []int{leftIndex, rightIndex}
+}
+
+func searchLeftBoundary(nums []int, target int) int {
+	leftBoundary, rightBoundary := 0, len(nums)-1
+	for leftBoundary <= rightBoundary {
+		mid := leftBoundary + (rightBoundary-leftBoundary)/2
+		if target > nums[mid] {
+			leftBoundary = mid + 1
+		} else if target < nums[mid] {
+			rightBoundary = mid - 1
+		} else if target == nums[mid] {
+			rightBoundary = mid - 1
+		}
+	}
+
+	//nums不存在数组中的两种情况
+	if leftBoundary == len(nums) || nums[leftBoundary] != target {
+		return -1
+	}
+
+	//如果target不存在数组中，那么应该返回-1
+	//如果只有一个target，targetIndex == mid, 那么[left,mid - 1]所有都小于target，最后一次循环就是left == mid - 1，然后left + 1 = mid,所以返回left
+	//如果不只是一个target, 那么最终会退化成上面这个case
+	return leftBoundary
+}
+
+func searchRightBoundary(nums []int, target int) int {
+	leftBoundary, rightBoundary := 0, len(nums)-1
+	for leftBoundary <= rightBoundary {
+		mid := leftBoundary + (rightBoundary-leftBoundary)/2
+		if target > nums[mid] {
+			leftBoundary = mid + 1
+		} else if target < nums[mid] {
+			rightBoundary = mid - 1
+		} else if target == nums[mid] {
+			leftBoundary = mid + 1
+		}
+	}
+
+	//nums不存在数组中的两种情况,rightBoundary本来就等于-1
+	if nums[rightBoundary] != target {
+		return -1
+	}
+
+	//如果target不存在数组中，那么应该返回-1
+	//如果只有一个target，targetIndex == mid, 那么[left,mid - 1]所有都小于target，最后一次循环就是left == mid - 1，然后left + 1 = mid,所以返回left
+	//如果不只是一个target, 那么最终会退化成上面这个case
+	return rightBoundary
+}
+
+//2020/3/10
 //解法一：找到目标值后，然后向左向右进行搜索，找到起点和终点
 //二分查找可以分为三种解法，也就是找到值，找到值得左边界，找到值得右边界，详情可见labuladong
 func searchRange1(nums []int, target int) []int {
@@ -48,7 +112,7 @@ func handleEqualCondition(nums []int, target, index int) []int {
 //如果target<nums[mid] -> right = mid - 1= left - 1 (这个式子可以转换到上面)
 //循环的终止条件就是left = right + 1
 
-func searchRange(nums []int, target int) []int {
+func searchRange2(nums []int, target int) []int {
 	left := searchLeftBound(nums, target)
 	right := searchRightBound(nums, target)
 	return []int{left, right}

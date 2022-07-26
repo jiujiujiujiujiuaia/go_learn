@@ -7,7 +7,7 @@ package binarySearch
  */
 
 // @lc code=start
-func search(nums []int, target int) int {
+func binarySearch(nums []int, target int) int {
 	leftBoundary := 0
 	rightBoundary := len(nums) - 1
 
