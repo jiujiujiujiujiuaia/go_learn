@@ -64,9 +64,9 @@ target最终一定会某两个元素之间，也就是nums[l],nums[r]
 ### 结论
 1.所以循环终止条件最终都是l = r + 1，二分搜索完数组内潜在的值。
 2.target不存在数组中有三种情况：
-- target比nums数组所有值都大=>Left=len(nums)
-- target比nums数组所有值都小=> Left=0,R=-1
-- target大于nums[0],小于nums[len(nums)-1]=>Left 表达的target应该在的位置，Right表达的是target前一个位置
+- target比nums数组所有值都大 => Left=len(nums)
+- target比nums数组所有值都小 => Left=0,R=-1
+- target大于nums[0],小于nums[len(nums)-1] => Left = Right + 1, nums[Left] > target, nums[Right] < target 
 
 ## 2.搜索边界
 在basic的二分搜索进行升级，例如34th题，允许数组中有多个元素，返回range。

@@ -15,7 +15,7 @@ package binarySearch
 //解法一：每一行都是有序的，因此按照一行一行的暴力二分查找
 
 //解法二：从右上角开始，这个解法最坏的情况是o(m+n)，因为遍历所有的情况
-func searchMatrix(matrix [][]int, target int) bool {
+func searchMatrix3(matrix [][]int, target int) bool {
 	//1.单行单列为空的异常情况不讨论
 	if len(matrix) == 0 {
 		return false

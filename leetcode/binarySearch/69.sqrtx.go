@@ -8,10 +8,31 @@ package binarySearch
 
 // @lc code=start
 
-//2020/3/10 缺一个牛顿法
-
-//解法一：二分法
+//2022/7/28
+//还是比两年前聪明了，秒解
 func mySqrt(x int) int {
+	//特殊情况
+	if x == 1{
+		return 1
+	}
+	leftBoundary, rightBoundary := 1, x/2
+	for leftBoundary <= rightBoundary {
+		mid := leftBoundary + (rightBoundary-leftBoundary)/2
+		midSquare := mid * mid
+		if midSquare == x {
+			return mid
+		} else if midSquare > x {
+			rightBoundary = mid - 1
+		} else {
+			leftBoundary = mid + 1
+		}
+	}
+	return rightBoundary
+}
+
+//2020/3/10 缺一个牛顿法
+//解法一：二分法
+func mySqrt1(x int) int {
 	if x == 1 {
 		return 1
 	}
