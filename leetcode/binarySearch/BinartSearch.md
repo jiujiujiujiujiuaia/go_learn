@@ -114,3 +114,8 @@ r=targetIndex-1, 搜索范围是[l,targetIndex-1],因此这个case就是上面�
 然后由于最左边的target是最后一个target，因此r=targetIndex-1, 搜索范围是[l,targetIndex-1]，退化到**假设数组只有一个target**
 
 
+## 3.Corner cases
+1.数组中是否有重复的值？
+2.全部有序还是部分有序？需要转换成二分搜索的有序嘛？
+3.如果目标不存在数组会怎么样？
+4.存在数组，数组长度为1呢？

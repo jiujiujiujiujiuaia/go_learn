@@ -13,6 +13,7 @@ package binarySearch
 //比如{[5,6,7,8,9,10],[1,2,3,4]} 无论任意时刻，mid要么掉入上半有序区间，要么掉入下半有序区间。
 //假设掉入上半有序区间（反之亦然），那么如果target在[l,mid)范围内，那就退化成二分搜索。
 //如果不在范围内，那就放弃[l,mid) 就是[mid+1,r]范围，这个范围内，又会分为上半有序区间和下半有序区间。
+//范围不断缩小，直到为一个元素
 func search(nums []int, target int) int {
 	leftBoundary := 0
 	rightBoundary := len(nums) - 1
@@ -20,7 +21,9 @@ func search(nums []int, target int) int {
 		mid := leftBoundary + (rightBoundary-leftBoundary)/2
 		if nums[mid] == target {
 			return mid
+			//下面一定判断是否等于，因为有可能mid=l=r，而target不在nums里面，就会无限循环了
 		} else if nums[mid] >= nums[leftBoundary] {
+			//因为target已经不等于nums[mid] 但是不确定是否等于左边界，所以小于等于
 			if target < nums[mid] && target >= nums[leftBoundary] {
 				rightBoundary = mid - 1
 			} else {
