@@ -1,5 +1,7 @@
 package binarySearch
 
+import "go_learn/leetcode/util"
+
 /*
  * @lc app=leetcode.cn id=81 lang=golang
  *
@@ -11,6 +13,40 @@ package binarySearch
 //边界情况 ：[1,1,1,1,1] [1,2,3] [1,0,1,1,1] [1]
 //（1）第一种情况就退化到了o(n) （2）第二种情况是原地旋转 （3）第三种是无法区分哪段有序
 //（4）
+//2022/08/15
+//和33题相比，打破了mid在上半区或者下半区有序的设定，有的case无法判断上半区是否有序
+func search4(nums []int, target int) bool {
+	leftBoundary, rightBoundary := 0, len(nums)-1
+	for leftBoundary <= rightBoundary {
+		mid := leftBoundary + (rightBoundary-leftBoundary)/2
+		if nums[mid] == target {
+			return true
+		}
+
+		if nums[mid] == nums[leftBoundary] {
+			util.PrintArrayItem(nums, leftBoundary, mid, true)
+			leftBoundary++
+			continue
+		}
+
+		if nums[leftBoundary] < nums[mid] {
+			util.PrintArrayItem(nums, leftBoundary, mid, true)
+			if target >= nums[leftBoundary] && target < nums[mid] {
+				rightBoundary = mid - 1
+			} else {
+				leftBoundary = mid + 1
+			}
+		} else {
+			util.PrintArrayItem(nums, mid, rightBoundary, false)
+			if target > nums[mid] && target <= nums[rightBoundary] {
+				leftBoundary = mid + 1
+			} else {
+				rightBoundary = mid - 1
+			}
+		}
+	}
+	return false
+}
 
 func search3(nums []int, target int) bool {
 	if len(nums) == 0 {

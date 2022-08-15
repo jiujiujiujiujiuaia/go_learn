@@ -11,11 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a438997f-f4bb-4829-8405-e240722d521e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/240.搜索二维矩阵-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/240.搜索二维矩阵-ii.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/69.x-的平方根.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/69.sqrtx.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/74.搜索二维矩阵.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/74.搜索二维矩阵.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/BinartSearch.md" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/BinartSearch.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/81.搜索旋转排序数组-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/81.search-in-rotated-sorted-array-ii.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/util/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/util/util.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +261,7 @@
       <recent name="C:\goSourceCode\src\go_learn\leetcode\贪心" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.Test_addTwoNumbers in go_learn/leetcode/linkedList (1)">
+  <component name="RunManager" selected="Go Test.Test_search4 in go_learn/leetcode/binarySearch">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="learn_go_demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -284,64 +281,64 @@
       <filePath value="$PROJECT_DIR$/../../../../../goSourceCode/src/go_learn/并发/client/client.go" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_addTwoNumbers in go_learn/leetcode/linkedList (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_search4 in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
+      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/linkedList" />
+      <package value="go_learn/leetcode/binarySearch" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_addTwoNumbers\E$" />
+      <pattern value="^\QTest_search4\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_addTwoNumbers/Carry_more_than_one_bit_but_not_change_the_length in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_search4/原地旋转 in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
+      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/linkedList" />
+      <package value="go_learn/leetcode/binarySearch" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_addTwoNumbers\E$/^\QCarry_more_than_one_bit_but_not_change_the_length\E$" />
+      <pattern value="^\QTest_search4\E$/^\Q原地旋转\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_addTwoNumbers/Normal_cases_without_carry_one in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_search4/重复元素case in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
+      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/linkedList" />
+      <package value="go_learn/leetcode/binarySearch" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_addTwoNumbers\E$/^\QNormal_cases_without_carry_one\E$" />
+      <pattern value="^\QTest_search4\E$/^\Q重复元素case\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_mergeTwoLists in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_search4/重复元素case#02 in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
+      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/linkedList" />
+      <package value="go_learn/leetcode/binarySearch" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_mergeTwoLists\E$" />
+      <pattern value="^\QTest_search4\E$/^\Q重复元素case#02\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_mergeTwoLists/Delete_the_last_one in go_learn/leetcode/linkedList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_search4/重复元素case#03 in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/linkedList" />
+      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/linkedList" />
+      <package value="go_learn/leetcode/binarySearch" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_mergeTwoLists\E$/^\QDelete_the_last_one\E$" />
+      <pattern value="^\QTest_search4\E$/^\Q重复元素case#03\E$" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -356,19 +353,19 @@
     </configuration>
     <list>
       <item itemvalue="Go Build.go build client.go" />
-      <item itemvalue="Go Test.Test_addTwoNumbers in go_learn/leetcode/linkedList (1)" />
-      <item itemvalue="Go Test.Test_addTwoNumbers/Carry_more_than_one_bit_but_not_change_the_length in go_learn/leetcode/linkedList" />
-      <item itemvalue="Go Test.Test_addTwoNumbers/Normal_cases_without_carry_one in go_learn/leetcode/linkedList" />
-      <item itemvalue="Go Test.Test_mergeTwoLists in go_learn/leetcode/linkedList" />
-      <item itemvalue="Go Test.Test_mergeTwoLists/Delete_the_last_one in go_learn/leetcode/linkedList" />
+      <item itemvalue="Go Test.Test_search4 in go_learn/leetcode/binarySearch" />
+      <item itemvalue="Go Test.Test_search4/原地旋转 in go_learn/leetcode/binarySearch" />
+      <item itemvalue="Go Test.Test_search4/重复元素case in go_learn/leetcode/binarySearch" />
+      <item itemvalue="Go Test.Test_search4/重复元素case#02 in go_learn/leetcode/binarySearch" />
+      <item itemvalue="Go Test.Test_search4/重复元素case#03 in go_learn/leetcode/binarySearch" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.Test_addTwoNumbers in go_learn/leetcode/linkedList (1)" />
-        <item itemvalue="Go Test.Test_addTwoNumbers/Carry_more_than_one_bit_but_not_change_the_length in go_learn/leetcode/linkedList" />
-        <item itemvalue="Go Test.Test_addTwoNumbers/Normal_cases_without_carry_one in go_learn/leetcode/linkedList" />
-        <item itemvalue="Go Test.Test_mergeTwoLists in go_learn/leetcode/linkedList" />
-        <item itemvalue="Go Test.Test_mergeTwoLists/Delete_the_last_one in go_learn/leetcode/linkedList" />
+        <item itemvalue="Go Test.Test_search4 in go_learn/leetcode/binarySearch" />
+        <item itemvalue="Go Test.Test_search4/原地旋转 in go_learn/leetcode/binarySearch" />
+        <item itemvalue="Go Test.Test_search4/重复元素case#03 in go_learn/leetcode/binarySearch" />
+        <item itemvalue="Go Test.Test_search4/重复元素case in go_learn/leetcode/binarySearch" />
+        <item itemvalue="Go Test.Test_search4/重复元素case#02 in go_learn/leetcode/binarySearch" />
       </list>
     </recent_temporary>
   </component>
