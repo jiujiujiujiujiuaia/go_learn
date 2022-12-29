@@ -10,9 +10,216 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a438997f-f4bb-4829-8405-e240722d521e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/slice/sliceUsage.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/81.搜索旋转排序数组-ii.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/binarySearch/81.search-in-rotated-sorted-array-ii.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/util/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/util/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/1.两数之和.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/129.求根到叶子节点数字之和.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/130.被围绕的区域.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/131.分割回文串.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/135.分发糖果.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/146.lru缓存机制.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/155.最小栈.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/161.相隔为-1-的编辑距离.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/173.二叉搜索树迭代器.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/174.地下城游戏.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/188.买卖股票的最佳时机-iv.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/191.位-1-的个数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/212.单词搜索-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/221.最大正方形.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/252. 会议室.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/253. 会议室 II.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/255.验证前序遍历二叉搜索树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/263.丑数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/264.丑数-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/27.移除元素.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/32.最长有效括号.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/322.零钱兑换.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/378.有序矩阵中第k小的元素.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/39.组合总和.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/400.第n个数字.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/435.无重叠区间.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/450.删除二叉搜索树中的节点.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/468.验证ip地址.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/56.合并区间.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/662.二叉树最大宽度.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/687.最长同值路径.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/7. 整数反转.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/701.二叉搜索树中的插入操作.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/84.柱状图中最大的矩形.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/85.最大矩形.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/89.格雷编码.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/905.按奇偶排序数组.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/946.验证栈序列.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/97.交错字符串.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/988.从叶结点开始的最小字符串.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/153.寻找旋转排序数组中的最小值.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/154.寻找旋转排序数组中的最小值-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/240.搜索二维矩阵-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/33.search-in-rotated-sorted-array.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/33.search-in-rotated-sorted-array_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/34.find-first-and-last-position-of-element-in-sorted-array.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/35.search-insert-position.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/69.sqrtx.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/704.basic-binary-search.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/74.search-a-2d-matrix.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/81.search-in-rotated-sorted-array-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/81.search-in-rotated-sorted-array-ii_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/binarySearch/BinartSearch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/141. 环形链表.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/142. 环形链表 II.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/147.对链表进行插入排序.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/148.排序链表.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/160.相交链表.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/19.remove-nth-node-from-end-of-list.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/19.remove-nth-node-from-end-of-list_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/2.add-two-numbers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/2.add-two-numbers_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/203.移除链表元素.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/206. 反转链表.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/21.merge-two-sorted-lists.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/21.merge-two-sorted-lists_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/23.merge-k-sorted-lists.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/234. 回文链表.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/237. 删除链表中的节点.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/24.两两交换链表中的节点.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/25.k-个一组翻转链表.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/61.旋转链表.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/82.删除排序链表中的重复元素-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/83.删除排序链表中的重复元素.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/linkedList/92.反转链表-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/topk问题.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/util/LinkedList.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/util/LinkedList_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/util/util.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二维数组的问题/48.旋转图像.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二维数组的问题/54.螺旋矩阵.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二维数组的问题/59.螺旋矩阵-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/二维数组的问题/73.矩阵置零.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/位运算/136.只出现一次的数字.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/位运算/191.位-1-的个数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/位运算/231. 2的幂.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/位运算/50.pow-x-n.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/221. 最大正方形.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/10.正则表达式匹配.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/1143.最长公共子序列.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/115.不同的子序列.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/120. 三角形最小路径和.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/139.单词拆分.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/140.单词拆分-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/152.乘积最大子序列.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/198.打家劫舍.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/213.打家劫舍-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/221. 最大正方形.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/300.最长上升子序列.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/337.打家劫舍-iii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/343.整数拆分.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/44.通配符匹配.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/45.跳跃游戏-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/5.最长回文子串.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/53. 最大子序和.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/55.跳跃游戏.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/583.两个字符串的删除操作.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/62.不同路径.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/63.不同路径-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/64.最小路径和.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/70. 爬楼梯.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/72.编辑距离.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/动态规划/近期动态规划/96.不同的二叉搜索树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/双指针/11. 盛最多水的容器.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/双指针/344.反转字符串.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/双指针/557. 反转字符串中的单词 III.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/双指针/9. 回文数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/回溯/22. 括号生成.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/回溯/37.解数独.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/回溯/46. 全排列.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/回溯/51. N皇后.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/回溯/93.复原ip地址.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/12.整数转罗马数字.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/13.罗马数字转整数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/151.翻转字符串里的单词.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/159. 至多包含两个不同字符的最长子串.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/186. 翻转字符串里的单词2.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/3.无重复字符的最长子串.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/30.串联所有单词的子串.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/415.字符串相加.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/43.字符串相乘.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/49.字母异位词分组.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/76.最小覆盖子串.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/字符串/91.解码方法.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/排列组合/17.电话号码的字母组合.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/排列组合/46.全排列.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/排列组合/47.全排列-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/排列组合/77.组合.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/排列组合/78.子集.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/排列组合/90.子集-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/排序算法/quickSort.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/搜索/127.单词接龙.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/搜索/542.01-矩阵.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/搜索/79.单词搜索.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数据结构/栈/20. 有效的括号.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数据结构/栈/71. 简化路径.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/128.最长连续序列.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/169.多数元素.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/179.最大数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/189.旋转数组.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/215.数组中的第k个最大元素.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/238. 除自身以外数组的乘积.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/239.滑动窗口最大值.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/268.缺失数字.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/287.寻找重复数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/295.数据流的中位数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/4.寻找两个有序数组的中位数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/41.缺失的第一个正数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/42.接雨水.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/442.数组中重复的数据.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/448.找到所有数组中消失的数字.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/493.翻转对.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/65.有效数字.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/8.字符串转换整数-atoi.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/80.删除排序数组中的重复项-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/数组/88. 合并两个有序数组.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/100.相同的树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/101.对称二叉树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/102.二叉树的层次遍历.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/103.二叉树的锯齿形层次遍历.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/104.二叉树的最大深度.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/105.从前序与中序遍历序列构造二叉树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/106.从中序与后序遍历序列构造二叉树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/107.二叉树的层次遍历-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/108.将有序数组转换为二叉搜索树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/109.有序链表转换二叉搜索树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/110.平衡二叉树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/112.路径总和.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/113.路径总和-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/116.填充每个节点的下一个右侧节点指针.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/117.填充每个节点的下一个右侧节点指针-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/124.二叉树中的最大路径和.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/145.二叉树的后序遍历.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/208.实现-trie-前缀树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/222.完全二叉树的节点个数.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/230.二叉搜索树中第k小的元素.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/235.二叉搜索树的最近公共祖先.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/236.二叉树的最近公共祖先.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/257.二叉树的所有路径.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/26.删除排序数组中的重复项.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/437.路径总和-iii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/666.路径和-iv.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/94.二叉树的中序遍历.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/95.不同的二叉搜索树-ii.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/98.验证二叉搜索树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/树/99.恢复二叉搜索树.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/测试/542.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/测试/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/贪心/121. 买卖股票的最佳时机.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/贪心/122. 买卖股票的最佳时机 II.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/贪心/45. 跳跃游戏 II.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/贪心/55. 跳跃游戏.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,15 +299,6 @@
         <option value="file://$PROJECT_DIR$/../.." />
       </list>
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/19.remove-nth-node-from-end-of-list.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/19.remove-nth-node-from-end-of-list_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/2.add-two-numbers.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/2.add-two-numbers_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/21.merge-two-sorted-lists.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/21.merge-two-sorted-lists_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/leetcode/linkedList/23.merge-k-sorted-lists.go" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -241,9 +439,9 @@
     &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/A/Desktop/workspace/go_learn&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/A/Desktop/workspace/leetcode&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -261,7 +459,7 @@
       <recent name="C:\goSourceCode\src\go_learn\leetcode\贪心" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.Test_search4 in go_learn/leetcode/binarySearch">
+  <component name="RunManager" selected="Go Test.Test_sliceUsedInFunction_NotEnoughCapacity in go_learn/slice">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="learn_go_demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -281,64 +479,52 @@
       <filePath value="$PROJECT_DIR$/../../../../../goSourceCode/src/go_learn/并发/client/client.go" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_search4 in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_sliceUsedInFunction in go_learn/slice" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
+      <working_directory value="$PROJECT_DIR$/slice" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/binarySearch" />
+      <package value="go_learn/slice" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_search4\E$" />
+      <pattern value="^\QTest_sliceUsedInFunction\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_search4/原地旋转 in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_sliceUsedInFunction_NotEnoughCapacity in go_learn/slice" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
+      <working_directory value="$PROJECT_DIR$/slice" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/binarySearch" />
+      <package value="go_learn/slice" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_search4\E$/^\Q原地旋转\E$" />
+      <pattern value="^\QTest_sliceUsedInFunction_NotEnoughCapacity\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_search4/重复元素case in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_sliceUsedInFunction_enoughCapacity in go_learn/slice" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
+      <working_directory value="$PROJECT_DIR$/slice" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/binarySearch" />
+      <package value="go_learn/slice" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_search4\E$/^\Q重复元素case\E$" />
+      <pattern value="^\QTest_sliceUsedInFunction_enoughCapacity\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_search4/重复元素case#02 in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_understandAppendOperation_enoughCapacity in go_learn/slice" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
+      <working_directory value="$PROJECT_DIR$/slice" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/binarySearch" />
+      <package value="go_learn/slice" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTest_search4\E$/^\Q重复元素case#02\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test_search4/重复元素case#03 in go_learn/leetcode/binarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="learn_go_demo" />
-      <working_directory value="$PROJECT_DIR$/leetcode/binarySearch" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_learn/leetcode/binarySearch" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTest_search4\E$/^\Q重复元素case#03\E$" />
+      <pattern value="^\QTest_understandAppendOperation_enoughCapacity\E$" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -351,21 +537,32 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="sliceUsage_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="learn_go_demo" />
+      <working_directory value="$PROJECT_DIR$/slice" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="go_learn" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/slice/sliceUsage_test.go" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Go Build.go build client.go" />
-      <item itemvalue="Go Test.Test_search4 in go_learn/leetcode/binarySearch" />
-      <item itemvalue="Go Test.Test_search4/原地旋转 in go_learn/leetcode/binarySearch" />
-      <item itemvalue="Go Test.Test_search4/重复元素case in go_learn/leetcode/binarySearch" />
-      <item itemvalue="Go Test.Test_search4/重复元素case#02 in go_learn/leetcode/binarySearch" />
-      <item itemvalue="Go Test.Test_search4/重复元素case#03 in go_learn/leetcode/binarySearch" />
+      <item itemvalue="Go Test.Test_sliceUsedInFunction in go_learn/slice" />
+      <item itemvalue="Go Test.Test_sliceUsedInFunction_NotEnoughCapacity in go_learn/slice" />
+      <item itemvalue="Go Test.Test_sliceUsedInFunction_enoughCapacity in go_learn/slice" />
+      <item itemvalue="Go Test.Test_understandAppendOperation_enoughCapacity in go_learn/slice" />
+      <item itemvalue="Go Test.sliceUsage_test.go" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.Test_search4 in go_learn/leetcode/binarySearch" />
-        <item itemvalue="Go Test.Test_search4/原地旋转 in go_learn/leetcode/binarySearch" />
-        <item itemvalue="Go Test.Test_search4/重复元素case#03 in go_learn/leetcode/binarySearch" />
-        <item itemvalue="Go Test.Test_search4/重复元素case in go_learn/leetcode/binarySearch" />
-        <item itemvalue="Go Test.Test_search4/重复元素case#02 in go_learn/leetcode/binarySearch" />
+        <item itemvalue="Go Test.Test_sliceUsedInFunction_NotEnoughCapacity in go_learn/slice" />
+        <item itemvalue="Go Test.Test_sliceUsedInFunction_enoughCapacity in go_learn/slice" />
+        <item itemvalue="Go Test.Test_sliceUsedInFunction in go_learn/slice" />
+        <item itemvalue="Go Test.Test_understandAppendOperation_enoughCapacity in go_learn/slice" />
+        <item itemvalue="Go Test.sliceUsage_test.go" />
       </list>
     </recent_temporary>
   </component>
@@ -453,8 +650,12 @@
     <watches-manager>
       <configuration name="GoTestRunConfiguration">
         <watch expression="*(*&quot;go_learn/leetcode/util.ListNode&quot;)(824634066544)" />
+        <watch expression="result" language="go" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/go_learn$Test_permute_normal_case_in_go_learn_leetcode_permutationAndCombination.out" NAME="Test_permute/normal_case in go_learn/leetcode/permutationAndCombination Coverage Results" MODIFIED="1669285026750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/反射/反射.go">
